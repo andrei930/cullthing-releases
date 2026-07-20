@@ -1,0 +1,38 @@
+name: LGPL materials request
+description: Request the relinking materials offered for CullThing's rawler dependency.
+title: "LGPL materials request: CullThing "
+labels:
+  - licensing
+body:
+  - type: input
+    id: version
+    attributes:
+      label: CullThing version
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+    validations:
+      required: true
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: CPU architecture
+      options:
+        - Apple Silicon (arm64)
+        - Intel/AMD x64
+    validations:
+      required: true
+  - type: textarea
+    id: contact
+    attributes:
+      label: Contact and delivery details
+      description: Explain how you would like to receive the electronic archive. Avoid posting private information you do not want public.
+    validations:
+      required: true
