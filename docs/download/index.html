@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#111113" />
+    <title>Download CullThing</title>
+    <link rel="icon" href="../assets/cullthing-icon.png" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script type="module" src="../assets/download.js"></script>
+  </head>
+  <body>
+    <main class="download-page">
+      <a class="brand" href="../"
+        ><img
+          src="../assets/cullthing-icon.png"
+          width="36"
+          height="36"
+          alt=""
+        /><span><span class="gold">Cull</span>Thing</span></a
+      >
+      <h1>Your next set<br />of <span class="gold">keepers.</span></h1>
+      <p id="download-status" role="status" aria-live="polite">
+        Choose a platform to get the latest published installer.
+      </p>
+      <a id="installer" class="button primary" hidden>Download installer</a>
+      <div class="download-choices">
+        <a href="?platform=macos">Download for Mac</a
+        ><a href="?platform=windows">Download for Windows</a>
+      </div>
+      <p class="detail">
+        Mac: Apple Silicon, macOS 13.4+. Windows: Intel/AMD x64.
+      </p>
+      <p>
+        <a
+          href="https://github.com/andrei930/cullthing-releases/releases/latest"
+          >Open the latest release on GitHub</a
+        >
+      </p>
+      <noscript
+        ><p>
+          JavaScript is disabled. Open the latest release above and choose the
+          <strong>.dmg</strong> for Mac or <strong>x64-setup.exe</strong> for
+          Windows.
+        </p></noscript
+      >
+      <footer>
+        <a id="install-help" href="../#installation-heading"
+          >Installation instructions</a
+        >
+        <p>
+          Only download CullThing from its official release repository. Current
+          test builds may show a system security warning; see the installation
+          instructions.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
