@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111113" />
-    <title>CullThing — From shoot to selects.</title>
+    <meta name="theme-color" content="#09090b" />
+    <title>CullThing</title>
     <meta
       name="description"
-      content="Cull RAW photos, prepare Remove adjustments, and edit a shoot with EditThing. Official CullThing downloads for macOS and Windows."
+      content="A photo culling app for photographers who finish in Lightroom Classic. Downloads for Mac and Windows."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="CullThing — From shoot to selects." />
+    <meta property="og:title" content="CullThing" />
     <meta
       property="og:description"
-      content="A calmer way through your RAW shoot. Cull, prepare, and edit for your Lightroom Classic workflow."
+      content="A photo culling app for photographers who finish in Lightroom Classic."
     />
     <meta
       property="og:url"
@@ -28,947 +28,349 @@
       href="https://andrei930.github.io/cullthing-releases/"
     />
     <link rel="icon" type="image/png" href="assets/cullthing-icon.png" />
-    <link rel="stylesheet" href="assets/style.css?v=20261122-downloads" />
-    <script type="module" src="assets/site.js?v=20261122-downloads"></script>
+    <link
+      rel="preload"
+      href="assets/fonts/geist-mono-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap"
+    />
+    <link rel="stylesheet" href="assets/style.css?v=20261122-rewrite" />
+    <script type="module" src="assets/site.js?v=20261122-rewrite"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="header wrap">
-      <a class="brand" href="./" aria-label="CullThing home"
-        ><img
-          src="assets/cullthing-icon.png"
-          width="36"
-          height="36"
-          alt=""
-        /><span><span class="gold">Cull</span>Thing</span></a
-      >
-      <nav aria-label="Main navigation">
-        <a href="#review-tour">Screenshots</a><a href="#editthing">EditThing</a
-        ><a class="nav-download" href="#download">Download</a>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="hero wrap" aria-labelledby="hero-heading">
-        <p class="eyebrow">For the photographs worth keeping</p>
-        <h1 id="hero-heading">
-          From shoot<br />to <span class="gold">selects.</span>
-        </h1>
-        <div class="hero-bottom">
-          <p class="lede">
-            Find the frames that matter. Prepare the details.<br
-              class="desktop-break"
-            />
-            Give your shoot an edit that feels like you.
-          </p>
-          <div class="hero-downloads" aria-label="Download CullThing">
-            <a
-              class="button primary"
-              data-download="macos"
-              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg"
-              >Download for Mac <span class="file-type">.dmg</span></a
-            >
-            <a
-              class="button secondary"
-              data-download="windows"
-              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe"
-              >Download for Windows <span class="file-type">.exe</span></a
-            >
-          </div>
-        </div>
-        <p class="platform-note">
-          Mac: Apple Silicon, macOS 13.4+ · Windows: Intel/AMD x64<br />
-          <a href="#install-macos">Mac quick install &amp; setup</a> ·
-          <a href="#install-windows">Windows setup</a>
-        </p>
-      </section>
-      <figure class="hero-shot wrap">
-        <div class="window-bar" aria-hidden="true">
-          <span></span><span></span><span></span
-          ><b>CullThing / Your next set of keepers</b>
-        </div>
-        <img
-          class="app-shot"
-          src="assets/cullthing-grid-desktop.png"
-          alt="CullThing's grid view displaying sample photos, with a selected frame and keyboard-friendly review controls"
-          width="2882"
-          height="1880"
-          fetchpriority="high"
-        />
-        <figcaption>
-          Real interface. Demo photos and illustrative data. Explore the visual
-          tour below.
-        </figcaption>
-      </figure>
-      <section
-        id="workflow"
-        class="workflow wrap"
-        aria-labelledby="workflow-heading"
-      >
-        <div class="section-intro">
-          <p class="eyebrow">A place for the whole first pass</p>
-          <h2 id="workflow-heading">
-            Less between you<br />and your best work.
-          </h2>
-          <p>
-            From the memory card to the Lightroom handoff, keep the decisions
-            moving in one desktop app.
-          </p>
-        </div>
-        <div class="workflow-details">
-          <article>
-            <p class="tag">Bring it in</p>
-            <h3>Start with your shoot.</h3>
-            <p>
-              Use Card Manager to review and copy memory cards to your chosen
-              destinations. Open folders of RAW photos and common image files.
-            </p>
-          </article>
-          <article>
-            <p class="tag">Find your keepers</p>
-            <h3>The right view for every decision.</h3>
-            <p>
-              Move between grid, scenes, and single-image review. Inspect faces,
-              focus, and eye status; use stars, color labels, and pick/reject
-              flags to narrow the shoot.
-            </p>
-            <p class="detail">
-              Keyboard navigation · Filters &amp; sorting · Find by filename
-            </p>
-          </article>
-          <article>
-            <p class="tag">Prepare the details</p>
-            <h3>Frame it. Level it. Mark it.</h3>
-            <p>
-              Crop and straighten before your Lightroom pass. In Remove mode,
-              brush distractions, review auto-mark suggestions, and group
-              touching marks into a single removal.
-            </p>
-            <p class="detail">
-              CullThing saves the instructions to XMP. Lightroom Classic
-              generates the removal result.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        id="review-tour"
-        class="tour-section wrap"
-        aria-labelledby="review-tour-heading"
-      >
-        <p class="eyebrow">Review and workspace screenshots</p>
-        <h2 id="review-tour-heading">Make the workspace yours.</h2>
-        <p class="tour-intro">
-          Pick a layout for the way you review. Keep the controls within reach,
-          inspect the details, or clear the screen for the photograph.
-        </p>
-        <div class="screenshot-gallery" data-gallery="">
-          <div
-            class="gallery-tabs"
-            aria-label="Review and workspace screenshots"
-            hidden=""
-          >
-            <button
-              type="button"
-              id="review-tour-tab-0"
-              data-gallery-tab="review-tour-panel-0"
-            >
-              Filmstrip left</button
-            ><button
-              type="button"
-              id="review-tour-tab-1"
-              data-gallery-tab="review-tour-panel-1"
-            >
-              Filmstrip bottom</button
-            ><button
-              type="button"
-              id="review-tour-tab-2"
-              data-gallery-tab="review-tour-panel-2"
-            >
-              Scene mode</button
-            ><button
-              type="button"
-              id="review-tour-tab-3"
-              data-gallery-tab="review-tour-panel-3"
-            >
-              Faces &amp; info</button
-            ><button
-              type="button"
-              id="review-tour-tab-4"
-              data-gallery-tab="review-tour-panel-4"
-            >
-              Workspace settings</button
-            ><button
-              type="button"
-              id="review-tour-tab-5"
-              data-gallery-tab="review-tour-panel-5"
-            >
-              Hide the UI
-            </button>
-          </div>
-          <figure
-            id="review-tour-panel-0"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/review-filmstrip-left-desktop.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="A filmstrip beside the photograph"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>A filmstrip beside the photograph</h3>
-                <p>
-                  Keep neighboring frames in a vertical filmstrip, with the
-                  floating rating and flag bar centered beneath the photograph.
-                  Floating navigation arrows are off for this desktop layout.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="review-tour-panel-1"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/review-filmstrip-bottom-desktop.png"
-                width="2882"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="A filmstrip below the photograph"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>A filmstrip below the photograph</h3>
-                <p>
-                  Switch to a horizontal filmstrip. This view has the floating
-                  action bar and navigation buttons switched off, leaving the
-                  image clear.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="review-tour-panel-2"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/review-scenes-desktop.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Review one scene at a time"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Review one scene at a time</h3>
-                <p>
-                  The scene navigator groups the shoot into moments; the
-                  neighboring strip shows the frames in the selected scene. Move
-                  between moments without losing your place.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="review-tour-panel-3"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/review-faces-info-desktop.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Faces, focus, eyes, and the shot details"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Faces, focus, eyes, and the shot details</h3>
-                <p>
-                  Inspect the magnified face panel, the focus score, and eye
-                  status together. The info panel on the opposite side shows
-                  ratings, labels, camera, lens, exposure, and capture
-                  information. Eye status appears after Analyze Eyes.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="review-tour-panel-4"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/workspace-settings-desktop.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Put each panel where it works for you"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Put each panel where it works for you</h3>
-                <p>
-                  Dock the filmstrip left, right, or along the bottom. Move the
-                  scene navigator, face panel, and info panel to either side.
-                  Center the floating action bar or hide it; navigation arrows
-                  can be enabled when using a tablet.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="review-tour-panel-5"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/review-clean.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Let the photograph fill the view"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Let the photograph fill the view</h3>
-                <p>
-                  Hide the filmstrip and panels, switch off the floating
-                  controls, and hide the interface bars. Top and status bars can
-                  also auto-hide and reappear at the screen edge.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-      <section
-        id="tools-tour"
-        class="tour-section wrap"
-        aria-labelledby="tools-tour-heading"
-      >
-        <p class="eyebrow">Photo tool screenshots</p>
-        <h2 id="tools-tour-heading">A closer pass on the details.</h2>
-        <p class="tour-intro">
-          Prepare the framing and the cleanup while you are still reviewing.
-          Crop and level adjustments stay in metadata; Lightroom Classic
-          generates Remove results and expanded edges.
-        </p>
-        <div class="remove-benefits">
-          <h3>Prepare the cleanup while the shoot is fresh.</h3>
-          <p>
-            See a stray cable or an unwanted sign? Mark it as you cull, then
-            move to the next frame. Remove mode saves Lightroom-compatible
-            instructions alongside your photo. Lightroom Classic generates the
-            actual removal when you update AI settings.
-          </p>
-          <ul>
-            <li>
-              <strong>One review pass.</strong> Mark distractions while you are
-              already looking at each frame, with the filmstrip still at hand.
-              Avoid reopening every keeper later just to locate the same
-              cleanup.
-            </li>
-            <li>
-              <strong>Less repeated brushing.</strong> Copy marks between
-              similarly framed photos and refine them. Group strokes for the
-              same object into one removal.
-            </li>
-            <li>
-              <strong>A first pass from auto-mark.</strong> Choose wires, exit
-              signs, background cars, or other common distractions—or describe
-              an object—then review and accept the suggested marks.
-            </li>
-            <li>
-              <strong>Keep your hands on the image.</strong> Pan, add, erase,
-              and resize using configurable modifiers, the wheel, or shortcuts.
-              Fewer trips to the toolbar make long shoots easier to work
-              through.
-            </li>
-          </ul>
-        </div>
-        <div class="screenshot-gallery" data-gallery="">
-          <div
-            class="gallery-tabs"
-            aria-label="Photo tool screenshots"
-            hidden=""
-          >
-            <button
-              type="button"
-              id="tools-tour-tab-0"
-              data-gallery-tab="tools-tour-panel-0"
-            >
-              Remove mode</button
-            ><button
-              type="button"
-              id="tools-tour-tab-1"
-              data-gallery-tab="tools-tour-panel-1"
-            >
-              Remove controls</button
-            ><button
-              type="button"
-              id="tools-tour-tab-2"
-              data-gallery-tab="tools-tour-panel-2"
-            >
-              Crop</button
-            ><button
-              type="button"
-              id="tools-tour-tab-3"
-              data-gallery-tab="tools-tour-panel-3"
-            >
-              Straighten</button
-            ><button
-              type="button"
-              id="tools-tour-tab-4"
-              data-gallery-tab="tools-tour-panel-4"
-            >
-              Generative Expand
-            </button>
-          </div>
-          <figure
-            id="tools-tour-panel-0"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/remove-mode-desktop.png"
-                width="2882"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="A workspace built for marking distractions"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>A workspace built for marking distractions</h3>
-                <p>
-                  Brush, select, copy, paste, and group Remove marks while the
-                  filmstrip stays available. Adjust brush size, scroll resize
-                  speed, and overlay opacity; touching marks can become one
-                  removal automatically.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="tools-tour-panel-1"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/remove-controls-desktop.png"
-                width="2882"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Pan, brush, and erase without hunting for tools"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Pan, brush, and erase without hunting for tools</h3>
-                <p>
-                  Switch between Pan, Add, and Erase, or stay in Pan and use the
-                  configured modifiers to brush and erase. Resize with the
-                  wheel, pinch, or shortcuts. The in-app guide explains
-                  selection and grouping; modifiers are configurable.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="tools-tour-panel-2"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/crop-mode-desktop.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Frame the shot before the handoff"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Frame the shot before the handoff</h3>
-                <p>
-                  Use aspect presets, lock the ratio, flip the orientation, and
-                  drag the crop handles with a composition grid. Apply the crop
-                  to XMP without replacing the original photo.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="tools-tour-panel-3"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/straighten-mode-desktop.png"
-                width="2882"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Level the frame with room to fine-tune"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Level the frame with room to fine-tune</h3>
-                <p>
-                  Use Straighten for an automatic angle, adjust the Level slider
-                  yourself, and reset the crop and angle independently. The
-                  example shows a demo angle with the crop kept inside the
-                  rotated photo.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="tools-tour-panel-4"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/generative-expand-desktop.png"
-                width="2880"
-                height="1880"
-                loading="lazy"
-                decoding="async"
-                alt="Give the photograph more room"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Give the photograph more room</h3>
-                <p>
-                  Extend the frame beyond the original boundaries with
-                  Generative Expand. CullThing prepares a DNG copy; use Update
-                  AI Settings in Lightroom to generate the added edges. The
-                  white border shown here is the area awaiting generation.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-      <section
-        id="editthing"
-        class="edit-section"
-        aria-labelledby="edit-heading"
-      >
-        <div class="wrap edit-overview">
-          <p class="eyebrow">Meet <span class="gold">Edit</span>Thing</p>
-          <div class="edit-overview-grid">
-            <h2 id="edit-heading">Your look.<br />A head start.</h2>
-            <div>
-              <p class="lede">
-                Give the whole shoot a starting edit, then make the finishing
-                touches your own.
-              </p>
-              <p>
-                Start with an Instant profile from a preset, or a Personal
-                profile trained on your own edits. Try it on a few copies first,
-                refine it with feedback from Lightroom, and apply it across the
-                shoot.
-              </p>
-              <p class="detail">
-                Processing happens locally. First-time setup downloads models
-                and requires Adobe DNG Converter.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="edit-tour"
-        class="tour-section wrap"
-        aria-labelledby="edit-tour-heading"
-      >
-        <p class="eyebrow">EditThing screenshots</p>
-        <h2 id="edit-tour-heading">A profile, a project, a little feedback.</h2>
-        <p class="tour-intro">
-          Choose how EditThing learns your look, keep shoots organized as
-          projects, and confirm the changes it detects from your Lightroom trial
-          edits.
-        </p>
-        <div class="screenshot-gallery" data-gallery="">
-          <div
-            class="gallery-tabs"
-            aria-label="EditThing screenshots"
-            hidden=""
-          >
-            <button
-              type="button"
-              id="edit-tour-tab-0"
-              data-gallery-tab="edit-tour-panel-0"
-            >
-              Instant vs Personal</button
-            ><button
-              type="button"
-              id="edit-tour-tab-1"
-              data-gallery-tab="edit-tour-panel-1"
-            >
-              Project list</button
-            ><button
-              type="button"
-              id="edit-tour-tab-2"
-              data-gallery-tab="edit-tour-panel-2"
-            >
-              Lightroom feedback
-            </button>
-          </div>
-          <figure
-            id="edit-tour-panel-0"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/editthing-profile-choices.png"
-                width="2200"
-                height="1080"
-                loading="lazy"
-                decoding="async"
-                alt="Choose where your look comes from"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Choose where your look comes from</h3>
-                <p>
-                  Instant starts with a Lightroom preset and nine taste
-                  questions. Personal learns from your edited catalogs or RAW +
-                  XMP folders. If you are unsure, EditThing can inspect your
-                  edited photos and recommend a profile type.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="edit-tour-panel-1"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/editthing-projects.png"
-                width="2200"
-                height="1520"
-                loading="lazy"
-                decoding="async"
-                alt="Keep each shoot and its progress together"
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Keep each shoot and its progress together</h3>
-                <p>
-                  See the profile assigned to each project and which shoots are
-                  drafts, paused, or done. Open a project to continue editing;
-                  pause and resume work when you need to.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure
-            id="edit-tour-panel-2"
-            class="gallery-panel"
-            data-gallery-panel=""
-          >
-            <div class="gallery-image-frame">
-              <img
-                src="assets/editthing-lightroom-feedback-varied.png"
-                width="1100"
-                height="900"
-                loading="lazy"
-                decoding="async"
-                alt="Edit in Lightroom. Confirm what EditThing finds."
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h3>Edit in Lightroom. Confirm what EditThing finds.</h3>
-                <p>
-                  While the trial panel is open, EditThing watches the trial
-                  edits. With the Lightroom plug-in connected, it reads the
-                  changes without a separate XMP save. Consistent changes are
-                  preselected; mixed changes stay unchecked. Review the detected
-                  shifts, then confirm Save as adjustments and rewrite. This
-                  screen uses illustrative demo changes.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-      <section class="handoff wrap" aria-labelledby="handoff-heading">
-        <p class="eyebrow">Keep your workflow</p>
-        <h2 id="handoff-heading">Ready for what comes next.</h2>
-        <div class="two-col">
-          <article>
-            <h3>Take the decisions into Lightroom.</h3>
-            <p>
-              Ratings, labels, crops, and Remove instructions travel in XMP
-              sidecars. EditThing can write develop settings to sidecars or work
-              with an open catalog using the included Lightroom Classic plug-in.
-            </p>
-          </article>
-          <article>
-            <h3>Review from the couch.</h3>
-            <p>
-              Turn on Remote Access and pair a phone or tablet on the same
-              network. Browse and cull a project or your library from that
-              device's browser while the desktop hosts it.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        id="download"
-        class="download-section wrap"
-        aria-labelledby="download-heading"
-      >
-        <div>
-          <p class="eyebrow">Your next shoot starts here</p>
-          <h2 id="download-heading">Download CullThing.</h2>
-          <p>
-            Official desktop builds. Currently available for limited testing.
-          </p>
-          <p class="release-note" data-release-note="">CullThing v0.9.11</p>
-        </div>
-        <div class="download-options">
-          <article>
-            <div class="download-title">
-              <h3>macOS</h3>
-              <span>Apple Silicon</span>
-            </div>
-            <p>macOS 13.4 or later · M1 or newer</p>
-            <a
-              class="button primary"
-              data-download="macos"
-              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg"
-              >Download for Mac <span class="file-type">.dmg</span></a
-            ><a class="install-link" href="#install-macos"
-              >Mac installation steps</a
-            >
-          </article>
-          <article>
-            <div class="download-title">
-              <h3>Windows</h3>
-              <span>Intel / AMD 64-bit</span>
-            </div>
-            <p>x64 installer · Per-user installation</p>
-            <a
-              class="button secondary"
-              data-download="windows"
-              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe"
-              >Download for Windows <span class="file-type">.exe</span></a
-            ><a class="install-link" href="#install-windows"
-              >Windows installation steps</a
-            >
-          </article>
-          <p class="detail">
-            Intel Mac and Windows ARM builds are not provided.
-            <a
-              href="https://github.com/andrei930/cullthing-releases/releases/latest"
-              >All latest release files &amp; notes</a
-            >
-          </p>
-        </div>
-      </section>
-      <section class="installation wrap" aria-labelledby="installation-heading">
-        <p class="eyebrow">A little help getting started</p>
-        <h2 id="installation-heading">Install. Open. Start selecting.</h2>
-        <details id="install-macos">
-          <summary>Installing on macOS</summary>
+    <div class="wrap">
+      <header class="header">
+        <a class="brand" href="./"
+          ><img src="assets/cullthing-icon.png" width="28" height="28" alt="" />CullThing</a
+        >
+        <nav aria-label="Main">
+          <a href="#new">What's new</a>
+          <a href="#features">Features</a>
+          <a href="#install">Install</a>
+          <a href="https://github.com/andrei930/cullthing-releases">GitHub</a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <div class="top" id="download">
           <div>
-            <p>
-              Choose the Terminal installer or install the DMG manually. The
-              current test build is not yet notarized by Apple, so a manual
-              install may require first-launch approval.
+            <h1>CullThing</h1>
+            <p class="lede">
+              A photo culling app for photographers who finish in
+              Lightroom&nbsp;Classic.
             </p>
-            <h3>Quick install with Terminal</h3>
-            <p>
-              Open <strong>Terminal</strong>, paste this command, and press
-              <strong>Return</strong>:
+            <p class="body">
+              Go through a shoot scene by scene, check faces and focus, and
+              rate and flag from the keyboard. Mark crops and cleanups as you
+              go. Everything reaches Lightroom as XMP.
             </p>
-            <div class="install-command">
-              <pre><code id="mac-install-command">curl -fsSL https://raw.githubusercontent.com/andrei930/cullthing-releases/main/install-macos.sh | /bin/bash</code></pre>
-              <button type="button" data-copy-install="" hidden="">
-                Copy command
-              </button>
-            </div>
-            <p
-              class="copy-status"
-              data-copy-status=""
-              role="status"
-              aria-live="polite"
-            ></p>
-            <p>
-              The installer downloads the latest Apple Silicon release, verifies
-              the download, installs CullThing, and opens it. It removes
-              quarantine
-              <strong>only from the CullThing copy being installed</strong>, so
-              no separate <code>xattr</code> command is needed.
-            </p>
-            <p>
-              Run it without <code>sudo</code>. It installs in Applications, or
-              your user Applications folder if needed, and keeps your existing
-              settings.
+            <div class="downloads">
               <a
-                href="https://github.com/andrei930/cullthing-releases/blob/main/install-macos.sh"
-                >View the installer script</a
-              >.
+                class="button primary"
+                data-download="macos"
+                href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_aarch64.dmg"
+                >Download for Mac <small>.dmg</small></a
+              >
+              <a
+                class="button"
+                data-download="windows"
+                href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_x64-setup.exe"
+                >Download for Windows <small>.exe</small></a
+              >
+            </div>
+            <p class="faint">
+              Mac: Apple Silicon, macOS 13.4 or later · Windows: Intel/AMD x64<br />
+              Test build, not signed yet, so both systems warn on first launch.
+              <a href="#install">How to open it</a>
             </p>
-            <p>
-              <strong>Updating an existing copy?</strong> If CullThing is
-              running, quit it before using this installer.
-            </p>
-            <h3>Or install the DMG manually</h3>
-            <ol>
+          </div>
+
+          <section class="news" id="new" aria-labelledby="new-heading">
+            <h2 id="new-heading">
+              What's new in <span class="mono" data-release-version>0.9.12</span>
+            </h2>
+            <time class="faint" data-release-date datetime="2026-11-22"
+              >22 November 2026</time
+            >
+            <ul data-release-notes data-release-tag="app-v0.9.12">
               <li>
+                <b>Run first.</b> Put selected photos ahead of a running
+                auto-mark queue.
+              </li>
+              <li>
+                <b>EditThing.</b> Fixed Lightroom save errors with “Always use
+                camera profile”.
+              </li>
+              <li>
+                <b>Remote Access.</b> The computer stays awake while a phone is
+                loading photos, and no longer while a tab sits idle.
+              </li>
+              <li>Fixed a possible crash in a URL-handling library.</li>
+            </ul>
+            <a
+              class="all"
+              data-release-link
+              href="https://github.com/andrei930/cullthing-releases/releases"
+              >All releases →</a
+            >
+          </section>
+        </div>
+
+        <figure class="hero-shot">
+          <img
+            class="shot"
+            src="assets/web/cullthing-grid-desktop.webp"
+            width="1920"
+            height="1253"
+            alt="CullThing's grid view: a shoot of 24 photos with star ratings, pick flags and one selected frame."
+          />
+          <figcaption class="faint">
+            Sample photos from Unsplash and Lorem Picsum.
+          </figcaption>
+        </figure>
+
+        <section id="features" aria-labelledby="features-heading">
+          <h2 class="section-title" id="features-heading">What it does</h2>
+
+          <div class="feature">
+            <div>
+              <h3>Sort the shoot by scene</h3>
+              <p>
+                CullThing groups the shoot into scenes. Work through one moment
+                at a time and keep the best frames of each.
+              </p>
+            </div>
+            <img
+              class="shot"
+              src="assets/web/review-scenes-desktop.webp"
+              width="1920"
+              height="1254"
+              loading="lazy"
+              alt="Scene view: a list of scenes on the left and the frames of the selected scene next to the photo."
+            />
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Check faces, eyes and focus</h3>
+              <p>
+                The face panel shows faces up close with a focus score, and
+                Analyze Eyes adds eye status. Camera, lens and exposure sit in
+                the info panel.
+              </p>
+            </div>
+            <img
+              class="shot"
+              src="assets/web/review-faces-info-desktop.webp"
+              width="1920"
+              height="1254"
+              loading="lazy"
+              alt="A portrait with the info panel on the left and a magnified face on the right."
+            />
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Mark distractions while you cull</h3>
+              <p>
+                Brush over a stray cable or a sign, or let auto-mark find wires,
+                exit signs and background cars. The marks are saved to XMP, and
+                Lightroom Classic does the removal.
+              </p>
+            </div>
+            <img
+              class="shot"
+              src="assets/web/remove-mode-desktop.webp"
+              width="1920"
+              height="1254"
+              loading="lazy"
+              alt="Remove mode: a marked path in a forest photo, with brush and auto-mark controls on the right."
+            />
+          </div>
+
+          <div class="feature feature-wide">
+            <div>
+              <h3>Frame it before the handoff</h3>
+              <p>Crops and angles are saved to XMP; the original file isn't touched.</p>
+            </div>
+            <div class="trio">
+              <div>
+                <img
+                  class="shot"
+                  src="assets/web/crop-mode-desktop.webp"
+                  width="1920"
+                  height="1254"
+                  loading="lazy"
+                  alt="Crop mode with crop handles and aspect presets."
+                />
+                <h4>Crop</h4>
+                <p class="muted">Aspect presets, a locked ratio and a composition grid.</p>
+              </div>
+              <div>
+                <img
+                  class="shot"
+                  src="assets/web/straighten-mode-desktop.webp"
+                  width="1920"
+                  height="1253"
+                  loading="lazy"
+                  alt="Straighten mode with a rotated photo and the Level slider."
+                />
+                <h4>Straighten</h4>
+                <p class="muted">An automatic angle, or set the level yourself.</p>
+              </div>
+              <div>
+                <img
+                  class="shot"
+                  src="assets/web/generative-expand-desktop.webp"
+                  width="1920"
+                  height="1254"
+                  loading="lazy"
+                  alt="Generative Expand: a photo with a white border marking the area to fill."
+                />
+                <h4>Generative Expand</h4>
+                <p class="muted">Prepares a DNG copy for Lightroom to fill in.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature" id="editthing">
+            <div>
+              <h3>EditThing: a first edit in your style</h3>
+              <p>
+                Train a profile on photos you've already edited, or start from a
+                preset and nine questions. Try it on a few photos, correct it in
+                Lightroom, then apply it to the shoot. It runs on your computer.
+              </p>
+            </div>
+            <img
+              class="shot"
+              src="assets/web/editthing-profile-choices.webp"
+              width="1920"
+              height="943"
+              loading="lazy"
+              alt="EditThing's new profile screen with the Personal and Instant profile types."
+            />
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Set up the screen your way</h3>
+              <p>
+                Filmstrip on the left, right or bottom; panels on either side.
+                Or hide everything but the photo.
+              </p>
+            </div>
+            <img
+              class="shot"
+              src="assets/web/workspace-settings-desktop.webp"
+              width="1920"
+              height="1254"
+              loading="lazy"
+              alt="Workspace settings for the filmstrip and panel positions."
+            />
+          </div>
+
+          <div class="also">
+            <div>
+              <h3>Card Manager</h3>
+              <p>Copy memory cards to one or more destinations.</p>
+            </div>
+            <div>
+              <h3>Cull from your phone</h3>
+              <p>
+                Turn on Remote Access and open the project in a phone or tablet
+                browser on the same network.
+              </p>
+            </div>
+            <div>
+              <h3>Lightroom reads it all</h3>
+              <p>Ratings, labels, flags, crops and marks go into XMP sidecars.</p>
+            </div>
+            <div>
+              <h3>Updates</h3>
+              <p>Choose Check for Updates… in the app menu.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="install" aria-labelledby="install-heading">
+          <h2 class="section-title" id="install-heading">Install</h2>
+          <div class="install">
+            <div class="card" id="install-macos">
+              <h3>Mac</h3>
+              <p>
+                Paste this into Terminal. It checks the download, installs
+                CullThing in Applications and opens it.
+              </p>
+              <pre class="cmd" id="mac-install-command">curl -fsSL https://raw.githubusercontent.com/andrei930/cullthing-releases/main/install-macos.sh | /bin/bash</pre>
+              <div class="copy-row">
+                <button class="button" type="button" data-copy-install hidden>
+                  Copy
+                </button>
+                <span class="faint" data-copy-status role="status"></span>
+              </div>
+              <p class="gap">
+                Or use the
                 <a
                   data-download="macos"
-                  href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg"
-                  >Download the Mac installer (.dmg)</a
+                  href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_aarch64.dmg"
+                  >.dmg</a
+                >. The build isn't notarized yet, so macOS blocks the first
+                launch: open System Settings → Privacy &amp; Security and choose
+                <b>Open Anyway</b>.
+              </p>
+            </div>
+            <div class="card" id="install-windows">
+              <h3>Windows</h3>
+              <p>
+                Run the
+                <a
+                  data-download="windows"
+                  href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_x64-setup.exe"
+                  >installer</a
+                >. It installs for your account only.
+              </p>
+              <p>
+                The build isn't signed yet, so SmartScreen may warn you: choose
+                <b>More info</b>, then <b>Run anyway</b>.
+              </p>
+              <p class="gap">
+                <b>EditThing</b> also needs
+                <a
+                  href="https://helpx.adobe.com/camera-raw/desktop/dng-and-file-formats/adobe-dng-converter.html"
+                  >Adobe DNG Converter</a
                 >
-                and open it.
-              </li>
-              <li>
-                Drag <strong>CullThing</strong> to
-                <strong>Applications</strong>, and eject the disk image.
-              </li>
-              <li>
-                Open CullThing from Applications. If macOS blocks it, choose
-                <strong>Done</strong>.
-              </li>
-              <li>
-                Go to <strong>System Settings → Privacy &amp; Security</strong>,
-                scroll to Security, and choose <strong>Open Anyway</strong> for
-                CullThing. Authenticate and confirm <strong>Open</strong>.
-              </li>
-            </ol>
-            <p>
-              Only approve a copy downloaded from the official release
-              repository. The Open Anyway button is available for about an hour
-              after the blocked launch.
-              <a
-                href="https://github.com/andrei930/cullthing-releases#installing-on-macos"
-                >Full instructions &amp; troubleshooting</a
-              >
-            </p>
+                and downloads its models on first use.
+              </p>
+            </div>
           </div>
-        </details>
-        <details id="install-windows">
-          <summary>Installing on Windows</summary>
-          <div>
-            <p>
-              <a
-                data-download="windows"
-                href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe"
-                >Download the Windows installer (.exe)</a
-              >
-              and run it. Follow the installer to install CullThing for your
-              Windows account, then open CullThing to start culling.
-            </p>
-            <p>
-              The current test build is not Authenticode-signed. If Microsoft
-              Defender SmartScreen displays a warning, select
-              <strong>More info</strong>, verify that the app is CullThing, and
-              choose <strong>Run anyway</strong>.
-              <a
-                href="https://github.com/andrei930/cullthing-releases#installing-on-windows"
-                >Full Windows instructions</a
-              >
-            </p>
-          </div>
-        </details>
-        <details>
-          <summary>Updating an existing installation</summary>
-          <div>
-            <p>
-              Choose <strong>Check for Updates…</strong> from the application
-              menu. The app prompts before installing an update and verifies the
-              updater's cryptographic signature. You can also download the
-              newest installer above.
-            </p>
-          </div>
-        </details>
-        <details>
-          <summary>What do I need for EditThing?</summary>
-          <div>
-            <p>
-              Install
-              <a
-                href="https://helpx.adobe.com/camera-raw/desktop/dng-and-file-formats/adobe-dng-converter.html"
-                >Adobe DNG Converter</a
-              >
-              and complete the model download during first-time setup. Start
-              with a Lightroom preset for an Instant profile, or your edited
-              photos for a Personal profile. Lightroom Classic is used to
-              continue editing and to generate Remove results.
-            </p>
-          </div>
-        </details>
-        <noscript
-          ><p>
-            JavaScript is disabled. Choose your installer from the
-            <a
-              href="https://github.com/andrei930/cullthing-releases/releases/latest"
-              >latest release page</a
-            >.
-          </p></noscript
-        >
-      </section>
-    </main>
-    <footer class="footer wrap">
-      <a class="brand" href="./"
-        ><span><span class="gold">Cull</span>Thing</span></a
-      >
-      <nav aria-label="Footer">
-        <a href="https://github.com/andrei930/cullthing-releases">GitHub</a
-        ><a href="https://github.com/andrei930/cullthing-releases/releases"
-          >Release notes</a
-        ><a href="https://github.com/andrei930/cullthing-releases/issues"
-          >Report an issue</a
-        ><a
-          href="https://github.com/andrei930/cullthing-releases/blob/main/PROPRIETARY-NOTICE.md"
-          >Legal &amp; licenses</a
-        >
-      </nav>
-    </footer>
+          <p class="faint">
+            <a href="https://github.com/andrei930/cullthing-releases#installing-on-macos"
+              >Full install notes and troubleshooting</a
+            >
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer faint">
+        <span>CullThing <span class="mono" data-release-version>0.9.12</span></span>
+        <nav aria-label="Footer">
+          <a href="https://github.com/andrei930/cullthing-releases">GitHub</a>
+          <a href="https://github.com/andrei930/cullthing-releases/issues"
+            >Report an issue</a
+          >
+          <a
+            href="https://github.com/andrei930/cullthing-releases/blob/main/PROPRIETARY-NOTICE.md"
+            >Licenses</a
+          >
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>

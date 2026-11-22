@@ -10,12 +10,12 @@ CullThing is a desktop app for photographers working through large RAW shoots. R
 
 ## Download and install
 
-**Current release: [CullThing v0.9.11](https://github.com/andrei930/cullthing-releases/releases/latest)**
+**Current release: [CullThing v0.9.12](https://github.com/andrei930/cullthing-releases/releases/latest)**
 
 | Platform    | Download installer                                                                                                                              | Requirements                             |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| **macOS**   | **[Download for Mac (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg)**       | Apple Silicon (M1 or newer), macOS 13.4+ |
-| **Windows** | **[Download for Windows (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe)** | 64-bit Intel/AMD                         |
+| **macOS**   | **[Download for Mac (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_aarch64.dmg)**       | Apple Silicon (M1 or newer), macOS 13.4+ |
+| **Windows** | **[Download for Windows (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_x64-setup.exe)** | 64-bit Intel/AMD                         |
 
 On Mac, you can also use the **[one-command installer](#quick-install-with-terminal)** to download and install the app. It handles the first-launch quarantine step for you.
 
@@ -190,7 +190,7 @@ Run it without `sudo`. It installs in `/Applications`, or `~/Applications` if ne
 
 ### Install the DMG manually
 
-1. [Download the Mac installer (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg) and open it.
+1. [Download the Mac installer (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_aarch64.dmg) and open it.
 2. Drag **CullThing** into the **Applications** folder, then eject the disk
    image.
 3. Open CullThing from **Applications**.
@@ -211,7 +211,7 @@ If the button is not present, try opening CullThing from **Applications** once m
 
 ## Installing on Windows
 
-1. [Download the Windows installer (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe) and run it.
+1. [Download the Windows installer (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_x64-setup.exe) and run it.
 2. Follow the installer to install CullThing for your Windows account.
 
 The current test build is not Authenticode-signed. If Microsoft Defender SmartScreen displays a warning, select **More info**, verify that the app is CullThing, and choose **Run anyway**.
