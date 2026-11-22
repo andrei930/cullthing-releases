@@ -72,7 +72,11 @@ ct_install_bundle() (
       ct_error "The previous app is preserved at $ct_stage/PreviousCullThing.app. Restore it before trying again."
       exit 1
     fi
-    ct_error 'The new app could not be installed. The previous installation was restored.'
+    if [[ "$ct_previous" == 1 ]]; then
+      ct_error 'The new app could not be installed. The previous installation was restored.'
+    else
+      ct_error 'CullThing could not be installed. Try again or use the DMG installer.'
+    fi
     exit 1
   fi
 )
@@ -117,7 +121,7 @@ ct_main() (
     exit 0
   fi
   if /usr/bin/pgrep -f "$ct_destination/Contents/MacOS/" >/dev/null 2>&1; then
-    ct_error 'Quit CullThing, then run this installer again.'
+    ct_error 'CullThing is running. Quit it before updating, then run this installer again.'
     exit 1
   fi
   /bin/mkdir -p "$ct_parent"

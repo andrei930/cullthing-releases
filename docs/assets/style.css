@@ -137,6 +137,14 @@ h3 {
 .hero-bottom .lede {
   margin: 0;
 }
+.hero-downloads {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 250px;
+}
+.hero-downloads .button {
+  justify-content: space-between;
+}
 .button {
   display: inline-flex;
   align-items: center;
@@ -511,7 +519,7 @@ strong {
   .hero-bottom {
     display: block;
   }
-  .hero-bottom .button {
+  .hero-downloads {
     margin-top: 1.5rem;
   }
   .lede {

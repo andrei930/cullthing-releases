@@ -303,3 +303,25 @@ test(
     );
   },
 );
+
+test(
+  "a failed first installation does not claim to have restored a previous app",
+  mac,
+  (t) => {
+    const dir = fixture(t),
+      source = join(dir, "source.app"),
+      destination = join(dir, "CullThing.app");
+    mkdirSync(source);
+    const result = bash(
+      'ct_remove_quarantine() { :; }; ct_move() { return 1; }; ct_install_bundle "$1" "$2"',
+      [source, destination],
+    );
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /Try again or use the DMG installer/);
+    assert.doesNotMatch(result.stderr, /previous installation was restored/);
+    assert.equal(existsSync(destination), false);
+    assert.ok(
+      !readdirSync(dir).some((name) => name.startsWith(".CullThing-install.")),
+    );
+  },
+);

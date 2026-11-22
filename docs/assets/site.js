@@ -1,7 +1,7 @@
 import { setupGalleries } from "./gallery.mjs";
 import { installerFor, latestRelease } from "./releases.mjs";
 
-// Relative download-page links remain usable if GitHub's API is unavailable.
+// Published installer links work even if the latest-release lookup fails.
 latestRelease()
   .then((release) => {
     document.querySelectorAll("[data-download]").forEach((link) => {

@@ -28,8 +28,8 @@
       href="https://andrei930.github.io/cullthing-releases/"
     />
     <link rel="icon" type="image/png" href="assets/cullthing-icon.png" />
-    <link rel="stylesheet" href="assets/style.css?v=20261122-desktop" />
-    <script type="module" src="assets/site.js?v=20261122-desktop"></script>
+    <link rel="stylesheet" href="assets/style.css?v=20261122-downloads" />
+    <script type="module" src="assets/site.js?v=20261122-downloads"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -60,10 +60,25 @@
             />
             Give your shoot an edit that feels like you.
           </p>
-          <a class="button primary" href="#download">Get CullThing</a>
+          <div class="hero-downloads" aria-label="Download CullThing">
+            <a
+              class="button primary"
+              data-download="macos"
+              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg"
+              >Download for Mac <span class="file-type">.dmg</span></a
+            >
+            <a
+              class="button secondary"
+              data-download="windows"
+              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe"
+              >Download for Windows <span class="file-type">.exe</span></a
+            >
+          </div>
         </div>
         <p class="platform-note">
-          For macOS &amp; Windows · Built for a Lightroom Classic workflow
+          Mac: Apple Silicon, macOS 13.4+ · Windows: Intel/AMD x64<br />
+          <a href="#install-macos">Mac quick install &amp; setup</a> ·
+          <a href="#install-windows">Windows setup</a>
         </p>
       </section>
       <figure class="hero-shot wrap">
@@ -748,13 +763,11 @@
       >
         <div>
           <p class="eyebrow">Your next shoot starts here</p>
-          <h2 id="download-heading">Make room<br />for the keepers.</h2>
+          <h2 id="download-heading">Download CullThing.</h2>
           <p>
             Official desktop builds. Currently available for limited testing.
           </p>
-          <p class="release-note" data-release-note="">
-            Latest published stable release
-          </p>
+          <p class="release-note" data-release-note="">CullThing v0.9.11</p>
         </div>
         <div class="download-options">
           <article>
@@ -766,7 +779,7 @@
             <a
               class="button primary"
               data-download="macos"
-              href="download/?platform=macos"
+              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg"
               >Download for Mac <span class="file-type">.dmg</span></a
             ><a class="install-link" href="#install-macos"
               >Mac installation steps</a
@@ -781,7 +794,7 @@
             <a
               class="button secondary"
               data-download="windows"
-              href="download/?platform=windows"
+              href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe"
               >Download for Windows <span class="file-type">.exe</span></a
             ><a class="install-link" href="#install-windows"
               >Windows installation steps</a
@@ -803,13 +816,14 @@
           <summary>Installing on macOS</summary>
           <div>
             <p>
-              Current test builds are ad-hoc signed and are not yet notarized by
-              Apple.
+              Choose the Terminal installer or install the DMG manually. The
+              current test build is not yet notarized by Apple, so a manual
+              install may require first-launch approval.
             </p>
             <h3>Quick install with Terminal</h3>
             <p>
-              Quit CullThing, open <strong>Terminal</strong>, paste this
-              command, and press <strong>Return</strong>:
+              Open <strong>Terminal</strong>, paste this command, and press
+              <strong>Return</strong>:
             </p>
             <div class="install-command">
               <pre><code id="mac-install-command">curl -fsSL https://raw.githubusercontent.com/andrei930/cullthing-releases/main/install-macos.sh | /bin/bash</code></pre>
@@ -824,29 +838,38 @@
               aria-live="polite"
             ></p>
             <p>
-              The helper downloads the latest stable Apple Silicon build, checks
-              its SHA-256 checksum against GitHub's release metadata, verifies
-              the app bundle, and installs and opens it. It removes quarantine
-              <strong>only from the verified CullThing copy</strong>, so there
-              is no separate <code>xattr</code> command to type. This is an
-              explicit override for the current unnotarized test build.
+              The installer downloads the latest Apple Silicon release, verifies
+              the download, installs CullThing, and opens it. It removes
+              quarantine
+              <strong>only from the CullThing copy being installed</strong>, so
+              no separate <code>xattr</code> command is needed.
             </p>
             <p>
-              Run without <code>sudo</code>. It installs in Applications, or
-              your user Applications folder if needed, and keeps photo libraries
-              and settings.
+              Run it without <code>sudo</code>. It installs in Applications, or
+              your user Applications folder if needed, and keeps your existing
+              settings.
               <a
                 href="https://github.com/andrei930/cullthing-releases/blob/main/install-macos.sh"
-                >Read the installer script</a
-              >
-              before running it.
+                >View the installer script</a
+              >.
+            </p>
+            <p>
+              <strong>Updating an existing copy?</strong> If CullThing is
+              running, quit it before using this installer.
             </p>
             <h3>Or install the DMG manually</h3>
             <ol>
               <li>
-                Open the <strong>.dmg</strong>, drag
-                <strong>CullThing</strong> to <strong>Applications</strong>, and
-                eject the disk image.
+                <a
+                  data-download="macos"
+                  href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg"
+                  >Download the Mac installer (.dmg)</a
+                >
+                and open it.
+              </li>
+              <li>
+                Drag <strong>CullThing</strong> to
+                <strong>Applications</strong>, and eject the disk image.
               </li>
               <li>
                 Open CullThing from Applications. If macOS blocks it, choose
@@ -873,14 +896,19 @@
           <summary>Installing on Windows</summary>
           <div>
             <p>
-              Run the <strong>x64-setup.exe</strong> installer. Current test
-              builds are not Authenticode-signed. If Microsoft Defender
-              SmartScreen warns you, select <strong>More info</strong>, verify
-              it is CullThing from this official repository, and select
-              <strong>Run anyway</strong>.
+              <a
+                data-download="windows"
+                href="https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe"
+                >Download the Windows installer (.exe)</a
+              >
+              and run it. Follow the installer to install CullThing for your
+              Windows account, then open CullThing to start culling.
             </p>
             <p>
-              The installer installs for your current Windows user.
+              The current test build is not Authenticode-signed. If Microsoft
+              Defender SmartScreen displays a warning, select
+              <strong>More info</strong>, verify that the app is CullThing, and
+              choose <strong>Run anyway</strong>.
               <a
                 href="https://github.com/andrei930/cullthing-releases#installing-on-windows"
                 >Full Windows instructions</a

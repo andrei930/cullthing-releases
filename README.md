@@ -8,28 +8,30 @@ CullThing is a desktop app for photographers working through large RAW shoots. R
 
 **[Visit the CullThing website](https://andrei930.github.io/cullthing-releases/)** · [Latest release & notes](https://github.com/andrei930/cullthing-releases/releases/latest) · [Report an issue](https://github.com/andrei930/cullthing-releases/issues)
 
-![CullThing photo grid with demo images](docs/assets/cullthing-grid-desktop.png)
-
-_The real CullThing interface, captured in demo mode with sample photos. No personal photo library is shown._
-
 ## Download and install
 
-| Platform    | Latest installer                                                                                      | Requirements                                      |
-| ----------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| **macOS**   | **[Download for Mac](https://andrei930.github.io/cullthing-releases/download/?platform=macos)**       | Apple Silicon (M1 or newer), macOS 13.4+ · `.dmg` |
-| **Windows** | **[Download for Windows](https://andrei930.github.io/cullthing-releases/download/?platform=windows)** | 64-bit Intel/AMD · `x64-setup.exe`                |
+**Current release: [CullThing v0.9.11](https://github.com/andrei930/cullthing-releases/releases/latest)**
 
-**For an easier Mac install, use the [one-command helper](#quick-install-with-terminal).** It downloads and installs the latest build without a separate quarantine command.
+| Platform    | Download installer                                                                                                                              | Requirements                             |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **macOS**   | **[Download for Mac (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg)**       | Apple Silicon (M1 or newer), macOS 13.4+ |
+| **Windows** | **[Download for Windows (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe)** | 64-bit Intel/AMD                         |
 
-These links look up the latest published stable release and open the matching installer. If a download cannot start, use the **[latest release page](https://github.com/andrei930/cullthing-releases/releases/latest)** and select the `.dmg` or `x64-setup.exe`. Intel Macs and Windows ARM builds are not currently provided.
+On Mac, you can also use the **[one-command installer](#quick-install-with-terminal)** to download and install the app. It handles the first-launch quarantine step for you.
+
+These links download the installer files directly. [Browse the latest release](https://github.com/andrei930/cullthing-releases/releases/latest) for all files and release notes. Intel Mac and Windows ARM builds are not currently provided.
 
 1. **Download** the installer for your computer.
 2. **Install** using the [macOS instructions](#installing-on-macos) or [Windows instructions](#installing-on-windows) below. Current test builds may show an operating-system security warning; the steps below explain what to expect.
-3. **Open a folder** of photos to start culling, or choose **EditThing** on the home screen to set up an editing profile.
+3. **Launch CullThing**, then open a folder of photos to start culling, or choose **EditThing** on the home screen to set up an editing profile.
 
 Already installed? Use **Check for Updates…** in the application menu.
 
 Files ending in `.app.tar.gz`, `.sig`, and `latest.json` belong to the updater, not a normal installation. Download only from this official repository or a link supplied directly by the developer. Draft releases are still being tested.
+
+![CullThing photo grid with demo images](docs/assets/cullthing-grid-desktop.png)
+
+_The real CullThing interface with sample photos and illustrative data. No personal photo library is shown._
 
 ## More than culling
 
@@ -170,23 +172,25 @@ CullThing is proprietary software currently distributed for limited testing. Thi
 
 ## Installing on macOS
 
-The current macOS build is ad-hoc signed and is not yet notarized by Apple. Choose the guided helper or install the DMG manually.
+Choose the Terminal installer or install the DMG manually. The current test build is not yet notarized by Apple, so a manual install may require first-launch approval.
 
 ### Quick install with Terminal
 
-Quit CullThing, open **Terminal**, paste this command, and press **Return**:
+Open **Terminal**, paste this command, and press **Return**:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/andrei930/cullthing-releases/main/install-macos.sh | /bin/bash
 ```
 
-The [installer script](install-macos.sh) downloads the latest stable Apple Silicon build from this official repository, checks its SHA-256 checksum against GitHub's release metadata, verifies the app bundle's identity and signature integrity, installs it, and opens it. It removes quarantine **only from the verified CullThing copy being installed**, so you do not need to type an `xattr` command. This is an explicit override for our current unnotarized test build; it does not notarize the app.
+The installer downloads the latest Apple Silicon release, verifies the download, installs CullThing, and opens it. It removes quarantine **only from the CullThing copy being installed**, so no separate `xattr` command is needed.
 
-Run it as your normal user, without `sudo`. It uses `/Applications` when writable, otherwise `~/Applications`. Existing photo libraries and app settings are kept. A failed replacement restores the previous app. To inspect it first, open the script link above. Maintainers can run `bash install-macos.sh --dry-run` to download and verify without installing, changing quarantine, or launching.
+Run it without `sudo`. It installs in `/Applications`, or `~/Applications` if needed, and keeps your existing settings. [View the installer script](install-macos.sh).
+
+**Updating an existing copy?** If CullThing is running, quit it before using this installer.
 
 ### Install the DMG manually
 
-1. Open the downloaded `.dmg` file.
+1. [Download the Mac installer (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_aarch64.dmg) and open it.
 2. Drag **CullThing** into the **Applications** folder, then eject the disk
    image.
 3. Open CullThing from **Applications**.
@@ -207,10 +211,10 @@ If the button is not present, try opening CullThing from **Applications** once m
 
 ## Installing on Windows
 
-The current Windows build is not Authenticode-signed. If Microsoft Defender
-SmartScreen displays a warning, select **More info**, verify that the app is
-CullThing, and choose **Run anyway**. The installer operates for the current
-Windows user and does not require a system-wide installation.
+1. [Download the Windows installer (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.11/CullThing_0.9.11_x64-setup.exe) and run it.
+2. Follow the installer to install CullThing for your Windows account.
+
+The current test build is not Authenticode-signed. If Microsoft Defender SmartScreen displays a warning, select **More info**, verify that the app is CullThing, and choose **Run anyway**.
 
 ## Updates
 
