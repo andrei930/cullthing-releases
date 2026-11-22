@@ -8,6 +8,7 @@ The application source remains in the private CullThing repository. This public 
 - The README's platform links use `docs/download/`. It looks up GitHub's latest published stable release, chooses the `.dmg` or `x64-setup.exe`, and redirects to the official GitHub asset. The home page also resolves these buttons directly. No version strings need updating on each release.
 - If the API is rate-limited, offline, or missing an installer, visitors get the stable GitHub release-page fallback. JavaScript-disabled browsers can use that link too.
 - Screenshots show the real application frontend with illustrative mock data, captured on 2026-11-22. Sample photos come from [Lorem Picsum](https://picsum.photos/); no user library or private application source is published.
+- The visual tour has three independent keyboard-accessible tab groups. Without JavaScript, all screenshots remain visible. Full-size images are linked from each panel. See [SCREENSHOTS.md](SCREENSHOTS.md) for capture intent and demo-data notes.
 - Keep the installation warnings in sync with the actual signing/notarization status of published builds.
 - Check download selection with `node --test scripts/releases.test.mjs`. To inspect the site locally, serve `docs/` with any static HTTP server; no compilation is needed.
 

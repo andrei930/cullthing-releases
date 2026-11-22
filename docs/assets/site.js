@@ -1,3 +1,4 @@
+import { setupGalleries } from "./gallery.mjs";
 import { installerFor, latestRelease } from "./releases.mjs";
 
 // Relative download-page links remain usable if GitHub's API is unavailable.
@@ -25,3 +26,5 @@ function showInstallSteps() {
 }
 window.addEventListener("hashchange", showInstallSteps);
 showInstallSteps();
+
+setupGalleries();

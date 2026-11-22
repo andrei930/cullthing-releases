@@ -43,7 +43,7 @@
         /><span><span class="gold">Cull</span>Thing</span></a
       >
       <nav aria-label="Main navigation">
-        <a href="#workflow">Features</a><a href="#editthing">EditThing</a
+        <a href="#review-tour">Screenshots</a><a href="#editthing">EditThing</a
         ><a class="nav-download" href="#download">Download</a>
       </nav>
     </header>
@@ -83,7 +83,8 @@
             fetchpriority="high"
         /></a>
         <figcaption>
-          Real interface. Demo photos. Your library stays yours.
+          Real interface. Demo photos and illustrative data. Explore the visual
+          tour below.
         </figcaption>
       </figure>
       <section
@@ -138,52 +139,593 @@
         </div>
       </section>
       <section
+        id="review-tour"
+        class="tour-section wrap"
+        aria-labelledby="review-tour-heading"
+      >
+        <p class="eyebrow">Review and workspace screenshots</p>
+        <h2 id="review-tour-heading">Make the workspace yours.</h2>
+        <p class="tour-intro">
+          Pick a layout for the way you review. Keep the controls within reach,
+          inspect the details, or clear the screen for the photograph.
+        </p>
+        <div class="screenshot-gallery" data-gallery>
+          <div
+            class="gallery-tabs"
+            aria-label="Review and workspace screenshots"
+            hidden
+          >
+            <button
+              type="button"
+              id="review-tour-tab-0"
+              data-gallery-tab="review-tour-panel-0"
+            >
+              Filmstrip left</button
+            ><button
+              type="button"
+              id="review-tour-tab-1"
+              data-gallery-tab="review-tour-panel-1"
+            >
+              Filmstrip bottom</button
+            ><button
+              type="button"
+              id="review-tour-tab-2"
+              data-gallery-tab="review-tour-panel-2"
+            >
+              Scene mode</button
+            ><button
+              type="button"
+              id="review-tour-tab-3"
+              data-gallery-tab="review-tour-panel-3"
+            >
+              Faces &amp; info</button
+            ><button
+              type="button"
+              id="review-tour-tab-4"
+              data-gallery-tab="review-tour-panel-4"
+            >
+              Workspace settings</button
+            ><button
+              type="button"
+              id="review-tour-tab-5"
+              data-gallery-tab="review-tour-panel-5"
+            >
+              Hide the UI
+            </button>
+          </div>
+          <figure
+            id="review-tour-panel-0"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/review-filmstrip-left.png"
+              aria-label="View full screenshot: A filmstrip beside the photograph"
+              ><img
+                src="assets/review-filmstrip-left.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="A filmstrip beside the photograph"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>A filmstrip beside the photograph</h3>
+                <p>
+                  Keep neighboring frames in a vertical filmstrip, with the
+                  floating rating and flag bar and separate navigation buttons
+                  within reach.
+                </p>
+              </div>
+              <a href="assets/review-filmstrip-left.png"
+                >View full screenshot</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            id="review-tour-panel-1"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/review-filmstrip-bottom.png"
+              aria-label="View full screenshot: A filmstrip below the photograph"
+              ><img
+                src="assets/review-filmstrip-bottom.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="A filmstrip below the photograph"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>A filmstrip below the photograph</h3>
+                <p>
+                  Switch to a horizontal filmstrip. This view has the floating
+                  action bar and navigation buttons switched off, leaving the
+                  image clear.
+                </p>
+              </div>
+              <a href="assets/review-filmstrip-bottom.png"
+                >View full screenshot</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            id="review-tour-panel-2"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/review-scenes.png"
+              aria-label="View full screenshot: Review one scene at a time"
+              ><img
+                src="assets/review-scenes.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Review one scene at a time"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Review one scene at a time</h3>
+                <p>
+                  The scene navigator groups the shoot into moments; the
+                  neighboring strip shows the frames in the selected scene. Move
+                  between moments without losing your place.
+                </p>
+              </div>
+              <a href="assets/review-scenes.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="review-tour-panel-3"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/review-faces-info.png"
+              aria-label="View full screenshot: Faces, focus, eyes, and the shot details"
+              ><img
+                src="assets/review-faces-info.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Faces, focus, eyes, and the shot details"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Faces, focus, eyes, and the shot details</h3>
+                <p>
+                  Inspect the magnified face panel, the focus score, and eye
+                  status together. The info panel on the opposite side shows
+                  ratings, labels, camera, lens, exposure, and capture
+                  information. Eye status appears after Analyze Eyes.
+                </p>
+              </div>
+              <a href="assets/review-faces-info.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="review-tour-panel-4"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/workspace-settings.png"
+              aria-label="View full screenshot: Put each panel where it works for you"
+              ><img
+                src="assets/workspace-settings.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Put each panel where it works for you"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Put each panel where it works for you</h3>
+                <p>
+                  Dock the filmstrip left, right, or along the bottom. Move the
+                  scene navigator, face panel, and info panel to either side;
+                  show or hide floating action and navigation controls.
+                </p>
+              </div>
+              <a href="assets/workspace-settings.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="review-tour-panel-5"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/review-clean.png"
+              aria-label="View full screenshot: Let the photograph fill the view"
+              ><img
+                src="assets/review-clean.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Let the photograph fill the view"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Let the photograph fill the view</h3>
+                <p>
+                  Hide the filmstrip and panels, switch off the floating
+                  controls, and hide the interface bars. Top and status bars can
+                  also auto-hide and reappear at the screen edge.
+                </p>
+              </div>
+              <a href="assets/review-clean.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section
+        id="tools-tour"
+        class="tour-section wrap"
+        aria-labelledby="tools-tour-heading"
+      >
+        <p class="eyebrow">Photo tool screenshots</p>
+        <h2 id="tools-tour-heading">A closer pass on the details.</h2>
+        <p class="tour-intro">
+          Prepare the framing and the cleanup while you are still reviewing.
+          Crop and level adjustments stay in metadata; Lightroom Classic
+          generates Remove results and expanded edges.
+        </p>
+        <div class="screenshot-gallery" data-gallery>
+          <div class="gallery-tabs" aria-label="Photo tool screenshots" hidden>
+            <button
+              type="button"
+              id="tools-tour-tab-0"
+              data-gallery-tab="tools-tour-panel-0"
+            >
+              Remove mode</button
+            ><button
+              type="button"
+              id="tools-tour-tab-1"
+              data-gallery-tab="tools-tour-panel-1"
+            >
+              Remove controls</button
+            ><button
+              type="button"
+              id="tools-tour-tab-2"
+              data-gallery-tab="tools-tour-panel-2"
+            >
+              Crop</button
+            ><button
+              type="button"
+              id="tools-tour-tab-3"
+              data-gallery-tab="tools-tour-panel-3"
+            >
+              Straighten</button
+            ><button
+              type="button"
+              id="tools-tour-tab-4"
+              data-gallery-tab="tools-tour-panel-4"
+            >
+              Generative Expand
+            </button>
+          </div>
+          <figure
+            id="tools-tour-panel-0"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/remove-mode.png"
+              aria-label="View full screenshot: A workspace built for marking distractions"
+              ><img
+                src="assets/remove-mode.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="A workspace built for marking distractions"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>A workspace built for marking distractions</h3>
+                <p>
+                  Brush, select, copy, paste, and group Remove marks while the
+                  filmstrip stays available. Adjust brush size, scroll resize
+                  speed, and overlay opacity; touching marks can become one
+                  removal automatically.
+                </p>
+              </div>
+              <a href="assets/remove-mode.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="tools-tour-panel-1"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/remove-controls.png"
+              aria-label="View full screenshot: Pan, brush, and erase without hunting for tools"
+              ><img
+                src="assets/remove-controls.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Pan, brush, and erase without hunting for tools"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Pan, brush, and erase without hunting for tools</h3>
+                <p>
+                  Switch between Pan, Add, and Erase, or stay in Pan and use the
+                  configured modifiers to brush and erase. Resize with the
+                  wheel, pinch, or shortcuts. The in-app guide explains
+                  selection and grouping; modifiers are configurable.
+                </p>
+              </div>
+              <a href="assets/remove-controls.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="tools-tour-panel-2"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/crop-mode.png"
+              aria-label="View full screenshot: Frame the shot before the handoff"
+              ><img
+                src="assets/crop-mode.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Frame the shot before the handoff"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Frame the shot before the handoff</h3>
+                <p>
+                  Use aspect presets, lock the ratio, flip the orientation, and
+                  drag the crop handles with a composition grid. Apply the crop
+                  to XMP without replacing the original photo.
+                </p>
+              </div>
+              <a href="assets/crop-mode.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="tools-tour-panel-3"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/straighten-mode.png"
+              aria-label="View full screenshot: Level the frame with room to fine-tune"
+              ><img
+                src="assets/straighten-mode.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Level the frame with room to fine-tune"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Level the frame with room to fine-tune</h3>
+                <p>
+                  Use Straighten for an automatic angle, adjust the Level slider
+                  yourself, and reset the crop and angle independently. The
+                  example shows a demo angle with the crop kept inside the
+                  rotated photo.
+                </p>
+              </div>
+              <a href="assets/straighten-mode.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="tools-tour-panel-4"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/generative-expand.png"
+              aria-label="View full screenshot: Give the photograph more room"
+              ><img
+                src="assets/generative-expand.png"
+                width="2880"
+                height="1880"
+                loading="lazy"
+                decoding="async"
+                alt="Give the photograph more room"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Give the photograph more room</h3>
+                <p>
+                  Extend the frame beyond the original boundaries with
+                  Generative Expand. CullThing prepares a DNG copy; use Update
+                  AI Settings in Lightroom to generate the added edges. The
+                  white border shown here is the area awaiting generation.
+                </p>
+              </div>
+              <a href="assets/generative-expand.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section
         id="editthing"
         class="edit-section"
         aria-labelledby="edit-heading"
       >
-        <div class="wrap edit-layout">
-          <div class="edit-copy">
-            <p class="eyebrow">Meet <span class="gold">Edit</span>Thing</p>
+        <div class="wrap edit-overview">
+          <p class="eyebrow">Meet <span class="gold">Edit</span>Thing</p>
+          <div class="edit-overview-grid">
             <h2 id="edit-heading">Your look.<br />A head start.</h2>
-            <p class="lede">
-              Give the whole shoot a starting edit, then make the finishing
-              touches your own.
-            </p>
-            <dl>
-              <dt>Instant profiles</dt>
-              <dd>
-                Bring a Lightroom preset and answer a short questionnaire about
-                your editing preferences.
-              </dd>
-              <dt>Personal profiles</dt>
-              <dd>
-                Learn from your own edited photos in Lightroom Classic catalogs
-                or RAW folders with XMP sidecars.
-              </dd>
-            </dl>
-            <p>
-              Try a profile on a few photos, apply it across the shoot,
-              fine-tune its behavior, and undo a run when you need to.
-            </p>
-            <p class="detail">
-              Processing happens locally. First-time setup downloads models and
-              requires Adobe DNG Converter.
-            </p>
+            <div>
+              <p class="lede">
+                Give the whole shoot a starting edit, then make the finishing
+                touches your own.
+              </p>
+              <p>
+                Start with an Instant profile from a preset, or a Personal
+                profile trained on your own edits. Try it on a few copies first,
+                refine it with feedback from Lightroom, and apply it across the
+                shoot.
+              </p>
+              <p class="detail">
+                Processing happens locally. First-time setup downloads models
+                and requires Adobe DNG Converter.
+              </p>
+            </div>
           </div>
-          <figure class="edit-shot">
+        </div>
+      </section>
+      <section
+        id="edit-tour"
+        class="tour-section wrap"
+        aria-labelledby="edit-tour-heading"
+      >
+        <p class="eyebrow">EditThing screenshots</p>
+        <h2 id="edit-tour-heading">A profile, a project, a little feedback.</h2>
+        <p class="tour-intro">
+          Choose how EditThing learns your look, keep shoots organized as
+          projects, and confirm the changes it detects from your Lightroom trial
+          edits.
+        </p>
+        <div class="screenshot-gallery" data-gallery>
+          <div class="gallery-tabs" aria-label="EditThing screenshots" hidden>
+            <button
+              type="button"
+              id="edit-tour-tab-0"
+              data-gallery-tab="edit-tour-panel-0"
+            >
+              Instant vs Personal</button
+            ><button
+              type="button"
+              id="edit-tour-tab-1"
+              data-gallery-tab="edit-tour-panel-1"
+            >
+              Project list</button
+            ><button
+              type="button"
+              id="edit-tour-tab-2"
+              data-gallery-tab="edit-tour-panel-2"
+            >
+              Lightroom feedback
+            </button>
+          </div>
+          <figure
+            id="edit-tour-panel-0"
+            class="gallery-panel"
+            data-gallery-panel
+          >
             <a
-              href="assets/editthing-adjustments.png"
-              aria-label="View the full EditThing screenshot"
+              class="gallery-image-link"
+              href="assets/editthing-profile-choices.png"
+              aria-label="View full screenshot: Choose where your look comes from"
               ><img
-                src="assets/editthing-adjustments.png"
-                width="1280"
-                height="973"
-                alt="EditThing's Personal profile adjustments for exposure, white balance, tone, texture, and clarity"
+                src="assets/editthing-profile-choices.png"
+                width="2200"
+                height="1080"
                 loading="lazy"
+                decoding="async"
+                alt="Choose where your look comes from"
             /></a>
             <figcaption>
-              EditThing profile adjustments · Illustrative demo data
+              <div>
+                <h3>Choose where your look comes from</h3>
+                <p>
+                  Instant starts with a Lightroom preset and nine taste
+                  questions. Personal learns from your edited catalogs or RAW +
+                  XMP folders. If you are unsure, EditThing can inspect your
+                  edited photos and recommend a profile type.
+                </p>
+              </div>
+              <a href="assets/editthing-profile-choices.png"
+                >View full screenshot</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            id="edit-tour-panel-1"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/editthing-projects.png"
+              aria-label="View full screenshot: Keep each shoot and its progress together"
+              ><img
+                src="assets/editthing-projects.png"
+                width="2200"
+                height="1520"
+                loading="lazy"
+                decoding="async"
+                alt="Keep each shoot and its progress together"
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Keep each shoot and its progress together</h3>
+                <p>
+                  See the profile assigned to each project and which shoots are
+                  drafts, paused, or done. Open a project to continue editing;
+                  pause and resume work when you need to.
+                </p>
+              </div>
+              <a href="assets/editthing-projects.png">View full screenshot</a>
+            </figcaption>
+          </figure>
+          <figure
+            id="edit-tour-panel-2"
+            class="gallery-panel"
+            data-gallery-panel
+          >
+            <a
+              class="gallery-image-link"
+              href="assets/editthing-lightroom-feedback.png"
+              aria-label="View full screenshot: Edit in Lightroom. Confirm what EditThing finds."
+              ><img
+                src="assets/editthing-lightroom-feedback.png"
+                width="2200"
+                height="1800"
+                loading="lazy"
+                decoding="async"
+                alt="Edit in Lightroom. Confirm what EditThing finds."
+            /></a>
+            <figcaption>
+              <div>
+                <h3>Edit in Lightroom. Confirm what EditThing finds.</h3>
+                <p>
+                  While the trial panel is open, EditThing watches the trial
+                  edits. With the Lightroom plug-in connected, it reads the
+                  changes without a separate XMP save. Consistent changes are
+                  preselected; mixed changes stay unchecked. Review the detected
+                  shifts, then confirm Save as adjustments and rewrite. This
+                  screen uses illustrative demo changes.
+                </p>
+              </div>
+              <a href="assets/editthing-lightroom-feedback.png"
+                >View full screenshot</a
+              >
             </figcaption>
           </figure>
         </div>
@@ -377,7 +919,8 @@
       </nav>
       <p class="legal">
         © 2026 Andrei. CullThing is proprietary software; application source is
-        private. Sample photos in screenshots:
+        private. Screenshots use neutral demo names, sample photos, and
+        illustrative analysis and Lightroom changes. Sample photos:
         <a href="https://picsum.photos/">Lorem Picsum</a>.
       </p>
     </footer>
