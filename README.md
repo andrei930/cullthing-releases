@@ -8,7 +8,7 @@ CullThing is a desktop app for photographers working through large RAW shoots. R
 
 **[Visit the CullThing website](https://andrei930.github.io/cullthing-releases/)** · [Latest release & notes](https://github.com/andrei930/cullthing-releases/releases/latest) · [Report an issue](https://github.com/andrei930/cullthing-releases/issues)
 
-![CullThing photo grid with demo images](docs/assets/cullthing-grid.png)
+![CullThing photo grid with demo images](docs/assets/cullthing-grid-varied.png)
 
 _The real CullThing interface, captured in demo mode with sample photos. No personal photo library is shown._
 
@@ -53,31 +53,31 @@ Pick a layout for the way you review. Keep the controls within reach, inspect th
 
 Keep neighboring frames in a vertical filmstrip, with the floating rating and flag bar and separate navigation buttons within reach.
 
-![A filmstrip beside the photograph](docs/assets/review-filmstrip-left.png)
+![A filmstrip beside the photograph](docs/assets/review-filmstrip-left-varied.png)
 
 ### A filmstrip below the photograph
 
 Switch to a horizontal filmstrip. This view has the floating action bar and navigation buttons switched off, leaving the image clear.
 
-![A filmstrip below the photograph](docs/assets/review-filmstrip-bottom.png)
+![A filmstrip below the photograph](docs/assets/review-filmstrip-bottom-varied.png)
 
 ### Review one scene at a time
 
 The scene navigator groups the shoot into moments; the neighboring strip shows the frames in the selected scene. Move between moments without losing your place.
 
-![Review one scene at a time](docs/assets/review-scenes.png)
+![Review one scene at a time](docs/assets/review-scenes-varied.png)
 
 ### Faces, focus, eyes, and the shot details
 
 Inspect the magnified face panel, the focus score, and eye status together. The info panel on the opposite side shows ratings, labels, camera, lens, exposure, and capture information. Eye status appears after Analyze Eyes.
 
-![Faces, focus, eyes, and the shot details](docs/assets/review-faces-info.png)
+![Faces, focus, eyes, and the shot details](docs/assets/review-faces-info-varied.png)
 
 ### Put each panel where it works for you
 
 Dock the filmstrip left, right, or along the bottom. Move the scene navigator, face panel, and info panel to either side; show or hide floating action and navigation controls.
 
-![Put each panel where it works for you](docs/assets/workspace-settings.png)
+![Put each panel where it works for you](docs/assets/workspace-settings-varied.png)
 
 ### Let the photograph fill the view
 
@@ -96,31 +96,31 @@ Prepare the framing and the cleanup while you are still reviewing. Crop and leve
 
 Brush, select, copy, paste, and group Remove marks while the filmstrip stays available. Adjust brush size, scroll resize speed, and overlay opacity; touching marks can become one removal automatically.
 
-![A workspace built for marking distractions](docs/assets/remove-mode.png)
+![A workspace built for marking distractions](docs/assets/remove-mode-varied.png)
 
 ### Pan, brush, and erase without hunting for tools
 
 Switch between Pan, Add, and Erase, or stay in Pan and use the configured modifiers to brush and erase. Resize with the wheel, pinch, or shortcuts. The in-app guide explains selection and grouping; modifiers are configurable.
 
-![Pan, brush, and erase without hunting for tools](docs/assets/remove-controls.png)
+![Pan, brush, and erase without hunting for tools](docs/assets/remove-controls-varied.png)
 
 ### Frame the shot before the handoff
 
 Use aspect presets, lock the ratio, flip the orientation, and drag the crop handles with a composition grid. Apply the crop to XMP without replacing the original photo.
 
-![Frame the shot before the handoff](docs/assets/crop-mode.png)
+![Frame the shot before the handoff](docs/assets/crop-mode-varied.png)
 
 ### Level the frame with room to fine-tune
 
 Use Straighten for an automatic angle, adjust the Level slider yourself, and reset the crop and angle independently. The example shows a demo angle with the crop kept inside the rotated photo.
 
-![Level the frame with room to fine-tune](docs/assets/straighten-mode.png)
+![Level the frame with room to fine-tune](docs/assets/straighten-mode-varied.png)
 
 ### Give the photograph more room
 
 Extend the frame beyond the original boundaries with Generative Expand. CullThing prepares a DNG copy; use Update AI Settings in Lightroom to generate the added edges. The white border shown here is the area awaiting generation.
 
-![Give the photograph more room](docs/assets/generative-expand.png)
+![Give the photograph more room](docs/assets/generative-expand-varied.png)
 
 </details>
 
@@ -145,7 +145,7 @@ See the profile assigned to each project and which shoots are drafts, paused, or
 
 While the trial panel is open, EditThing watches the trial edits. With the Lightroom plug-in connected, it reads the changes without a separate XMP save. Consistent changes are preselected; mixed changes stay unchecked. Review the detected shifts, then confirm Save as adjustments and rewrite. This screen uses illustrative demo changes.
 
-![Edit in Lightroom. Confirm what EditThing finds.](docs/assets/editthing-lightroom-feedback.png)
+![Edit in Lightroom. Confirm what EditThing finds.](docs/assets/editthing-lightroom-feedback-varied.png)
 
 </details>
 
