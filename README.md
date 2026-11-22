@@ -2,169 +2,60 @@
 
 # CullThing
 
-**From memory card to selects, edits, and Lightroom.**
+Everything you do before Lightroom Classic, in one fast app. Go through a shoot scene by scene, check faces and focus, and rate from the keyboard. Brush out distractions while you cull, and Lightroom generates every removal in one batch instead of making you wait on each photo.
 
-CullThing is a desktop app for photographers working through large RAW shoots. Review photos by scene, find your keepers, prepare Remove adjustments, and give a whole shoot a starting edit with EditThing.
+**[Website and tour](https://andrei930.github.io/cullthing-releases/)** · [Release notes](https://github.com/andrei930/cullthing-releases/releases) · [Report an issue](https://github.com/andrei930/cullthing-releases/issues)
 
-**[Visit the CullThing website](https://andrei930.github.io/cullthing-releases/)** · [Latest release & notes](https://github.com/andrei930/cullthing-releases/releases/latest) · [Report an issue](https://github.com/andrei930/cullthing-releases/issues)
+![CullThing's grid view of a sample wedding](docs/assets/web/grid.webp)
 
-## Download and install
+## Download
 
 **Current release: [CullThing v0.9.12](https://github.com/andrei930/cullthing-releases/releases/latest)**
 
-| Platform    | Download installer                                                                                                                              | Requirements                             |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| **macOS**   | **[Download for Mac (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_aarch64.dmg)**       | Apple Silicon (M1 or newer), macOS 13.4+ |
-| **Windows** | **[Download for Windows (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_x64-setup.exe)** | 64-bit Intel/AMD                         |
+| Platform    | Installer                                                                                                                                       | Requirements                       |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| **macOS**   | **[Download for Mac (.dmg)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_aarch64.dmg)**       | Apple Silicon, macOS 13.4 or later |
+| **Windows** | **[Download for Windows (.exe)](https://github.com/andrei930/cullthing-releases/releases/download/app-v0.9.12/CullThing_0.9.12_x64-setup.exe)** | 64-bit Intel/AMD                   |
 
-On Mac, you can also use the **[one-command installer](#quick-install-with-terminal)** to download and install the app. It handles the first-launch quarantine step for you.
+These are test builds and aren't signed yet, so macOS and Windows warn the first time you open CullThing. The [Mac](#installing-on-macos) and [Windows](#installing-on-windows) steps below explain what to do. On a Mac, the [Terminal installer](#quick-install-with-terminal) handles it for you.
 
-These links download the installer files directly. [Browse the latest release](https://github.com/andrei930/cullthing-releases/releases/latest) for all files and release notes. Intel Mac and Windows ARM builds are not currently provided.
+Already installed? Choose **Check for Updates…** in the app menu.
 
-1. **Download** the installer for your computer.
-2. **Install** using the [macOS instructions](#installing-on-macos) or [Windows instructions](#installing-on-windows) below. Current test builds may show an operating-system security warning; the steps below explain what to expect.
-3. **Launch CullThing**, then open a folder of photos to start culling, or choose **EditThing** on the home screen to set up an editing profile.
+Files ending in `.app.tar.gz` and `.sig`, and `latest.json`, are for the updater, not for installing. Download CullThing only from this repository.
 
-Already installed? Use **Check for Updates…** in the application menu.
+## What it does
 
-Files ending in `.app.tar.gz`, `.sig`, and `latest.json` belong to the updater, not a normal installation. Download only from this official repository or a link supplied directly by the developer. Draft releases are still being tested.
+### Culling
 
-![CullThing photo grid with demo images](docs/assets/cullthing-grid-desktop.png)
+- **Scenes.** The shoot is grouped into scenes wherever there's a gap between shots. Change the gap (2 seconds to 5 minutes), add visual similarity, cap the photos per scene, or split by lens, camera body, folder or orientation.
+- **Faces, eyes and focus.** The face panel shows each face enlarged with a focus score from 1 to 10. Analyze Eyes marks eyes as open, partly closed or closed. The zoom key jumps to the sharpest face or the camera's focus point and stays there as you step through a burst.
+- **Camera clocks.** Align Timelines puts each camera body on its own lane so you can drag, nudge or let Suggest line up the moments. Sync from one shared moment, type an offset, or reuse saved offsets from the Clock library.
+- **Fast, and laid out your way.** The next photo is prepared before you get to it. Every panel can be resized, moved to either side or hidden.
+- **Keys and mouse.** The default keys follow Lightroom (0–5 stars, P/X/U flags, 6–9 color labels) and every shortcut can be changed. The mouse's back and forward buttons and the scroll wheel are configurable too.
 
-_The real CullThing interface with sample photos and illustrative data. No personal photo library is shown._
+### Remove, in one batch
 
-## More than culling
+In Lightroom Classic, Generative Remove makes you wait on each photo. In CullThing you brush distractions while you cull, and the marks are saved as Lightroom Remove instructions in each photo's XMP. In Lightroom you select the shoot and choose **Update AI Settings** once, and it generates every removal in one batch.
 
-- **Review your way.** Switch between a photo grid, scenes, and a single-image view. Navigate with the keyboard, compare similar frames, and inspect faces, focus, and eye status.
-- **Make your selects.** Use star ratings, color labels, pick/reject flags, filters, and sorting. Find a specific file with **⌘F / Ctrl+F**. Keep culling decisions alongside your photos in XMP sidecars.
-- **Crop, straighten, and expand.** Set framing and leveling with XMP adjustments, or use **Generative Expand** to prepare a DNG copy with a larger frame. Lightroom generates the new edges.
-- **Prepare removals.** Brush over distractions in **Remove mode**, use auto-mark suggestions, copy marks between photos, and group touching marks into one removal. CullThing saves Lightroom-compatible AI-update instructions; **Lightroom Classic generates the removal result**.
-- **Edit a shoot with EditThing.** Start from a Lightroom preset with an **Instant** profile, or train a **Personal** profile from your own edited photos. Try a profile on a few images, apply it across a shoot, adjust its behavior, and undo an edit run.
-- **Bring in your cards.** **Card Manager** lets you review and copy photos from memory cards to your chosen destinations.
-- **Cull from another device.** Enable **Remote Access** on the desktop, then pair a phone or tablet on the same network to review a project or the library in its browser.
-- **Continue in Lightroom Classic.** Carry ratings, labels, crops, and Remove instructions through XMP. EditThing can write develop settings to sidecars or work with an open catalog through the included Lightroom Classic plug-in.
+Auto-mark can add the marks for you: wires and cables, exit signs, power outlets and other common objects, or anything you type. Suggestions stay out of Lightroom until you accept them, and auto-mark never changes marks you painted yourself.
 
-## Clean up as you cull
+### How it fits with Lightroom Classic
 
-**Remove mode lets you prepare distractions for removal while you are already reviewing the shoot.** Brush over a stray cable, sign, or other unwanted object, then move straight to the next frame. CullThing saves the marks as Lightroom-compatible AI-update instructions; Lightroom Classic generates the actual removal when you update AI settings.
+1. Copy the cards with Card Manager.
+2. Cull in CullThing. Ratings, color labels, crops, angles and Remove marks are saved to XMP next to each RAW.
+3. Start the edit with EditThing, which writes develop settings to the XMP, or into an open catalog with the Lightroom plug-in.
+4. Import the folder into Lightroom, or choose **Metadata → Read Metadata from Files** if it's already in your catalog.
+5. Select the shoot and choose **Update AI Settings**. Removals and Generative Expand edges are generated in one batch.
 
-- **Spot it once, mark it now.** Keep your filmstrip available so cleanup preparation stays part of the culling pass, without reopening every keeper later just to find the same distractions.
-- **Reuse the work.** Copy and paste marks between similarly framed photos, then refine them. Group strokes that describe one object into a single removal.
-- **Let auto-mark do the first pass.** Choose common distractions such as wires, exit signs, or background cars, or describe an object. Review the suggested marks and accept the ones you want.
-- **Keep your hands moving.** Pan, brush, erase, and resize with configurable modifiers, the wheel, or shortcuts, with fewer trips to the toolbar.
+### EditThing
 
-You spend less time repeating selection work and switching between culling and cleanup. The original RAW stays intact; Lightroom remains the place to review and generate the final result.
+A free first edit in your style that runs on your computer. Build a Personal profile from photos you've already edited, or an Instant profile from a Lightroom preset and nine questions. Try it on about 10 copies and fix them in Lightroom; EditThing saves the changes you made consistently as adjustments to the profile. Repeat until it looks like your work, then apply it to the shoot. EditThing needs [Adobe DNG Converter](https://helpx.adobe.com/camera-raw/desktop/dng-and-file-formats/adobe-dng-converter.html) and downloads its models during first-time setup.
 
-## A visual tour
+### Also
 
-Screenshots show the real interface with sample photos, neutral project names, and illustrative analysis and Lightroom feedback data. They demonstrate the controls, not measured analysis results for these sample photos.
+Cull from a phone or tablet with Remote Access, check coverage with Folder Stats, and find a photo by filename with **⌘F / Ctrl+F**.
 
-<details open>
-<summary><strong>Review and arrange your workspace</strong></summary>
-
-Pick a layout for the way you review. Keep the controls within reach, inspect the details, or clear the screen for the photograph.
-
-### A filmstrip beside the photograph
-
-Keep neighboring frames in a vertical filmstrip, with the floating rating and flag bar centered beneath the photograph. Floating navigation arrows are off for this desktop layout.
-
-![A filmstrip beside the photograph](docs/assets/review-filmstrip-left-desktop.png)
-
-### A filmstrip below the photograph
-
-Switch to a horizontal filmstrip. This view has the floating action bar and navigation buttons switched off, leaving the image clear.
-
-![A filmstrip below the photograph](docs/assets/review-filmstrip-bottom-desktop.png)
-
-### Review one scene at a time
-
-The scene navigator groups the shoot into moments; the neighboring strip shows the frames in the selected scene. Move between moments without losing your place.
-
-![Review one scene at a time](docs/assets/review-scenes-desktop.png)
-
-### Faces, focus, eyes, and the shot details
-
-Inspect the magnified face panel, the focus score, and eye status together. The info panel on the opposite side shows ratings, labels, camera, lens, exposure, and capture information. Eye status appears after Analyze Eyes.
-
-![Faces, focus, eyes, and the shot details](docs/assets/review-faces-info-desktop.png)
-
-### Put each panel where it works for you
-
-Dock the filmstrip left, right, or along the bottom. Move the scene navigator, face panel, and info panel to either side. Center the floating action bar or hide it; navigation arrows can be enabled when using a tablet.
-
-![Put each panel where it works for you](docs/assets/workspace-settings-desktop.png)
-
-### Let the photograph fill the view
-
-Hide the filmstrip and panels, switch off the floating controls, and hide the interface bars. Top and status bars can also auto-hide and reappear at the screen edge.
-
-![Let the photograph fill the view](docs/assets/review-clean.png)
-
-</details>
-
-<details open>
-<summary><strong>Crop, straighten, expand, and prepare removals</strong></summary>
-
-Prepare the framing and the cleanup while you are still reviewing. Crop and level adjustments stay in metadata; Lightroom Classic generates Remove results and expanded edges.
-
-### A workspace built for marking distractions
-
-Brush, select, copy, paste, and group Remove marks while the filmstrip stays available. Adjust brush size, scroll resize speed, and overlay opacity; touching marks can become one removal automatically.
-
-![A workspace built for marking distractions](docs/assets/remove-mode-desktop.png)
-
-### Pan, brush, and erase without hunting for tools
-
-Switch between Pan, Add, and Erase, or stay in Pan and use the configured modifiers to brush and erase. Resize with the wheel, pinch, or shortcuts. The in-app guide explains selection and grouping; modifiers are configurable.
-
-![Pan, brush, and erase without hunting for tools](docs/assets/remove-controls-desktop.png)
-
-### Frame the shot before the handoff
-
-Use aspect presets, lock the ratio, flip the orientation, and drag the crop handles with a composition grid. Apply the crop to XMP without replacing the original photo.
-
-![Frame the shot before the handoff](docs/assets/crop-mode-desktop.png)
-
-### Level the frame with room to fine-tune
-
-Use Straighten for an automatic angle, adjust the Level slider yourself, and reset the crop and angle independently. The example shows a demo angle with the crop kept inside the rotated photo.
-
-![Level the frame with room to fine-tune](docs/assets/straighten-mode-desktop.png)
-
-### Give the photograph more room
-
-Extend the frame beyond the original boundaries with Generative Expand. CullThing prepares a DNG copy; use Update AI Settings in Lightroom to generate the added edges. The white border shown here is the area awaiting generation.
-
-![Give the photograph more room](docs/assets/generative-expand-desktop.png)
-
-</details>
-
-<details open>
-<summary><strong>EditThing: profiles, projects, and Lightroom feedback</strong></summary>
-
-Choose how EditThing learns your look, keep shoots organized as projects, and confirm the changes it detects from your Lightroom trial edits.
-
-### Choose where your look comes from
-
-Instant starts with a Lightroom preset and nine taste questions. Personal learns from your edited catalogs or RAW + XMP folders. If you are unsure, EditThing can inspect your edited photos and recommend a profile type.
-
-![Choose where your look comes from](docs/assets/editthing-profile-choices.png)
-
-### Keep each shoot and its progress together
-
-See the profile assigned to each project and which shoots are drafts, paused, or done. Open a project to continue editing; pause and resume work when you need to.
-
-![Keep each shoot and its progress together](docs/assets/editthing-projects.png)
-
-### Edit in Lightroom. Confirm what EditThing finds.
-
-While the trial panel is open, EditThing watches the trial edits. With the Lightroom plug-in connected, it reads the changes without a separate XMP save. Consistent changes are preselected; mixed changes stay unchecked. Review the detected shifts, then confirm Save as adjustments and rewrite. This screen uses illustrative demo changes.
-
-![Edit in Lightroom. Confirm what EditThing finds.](docs/assets/editthing-lightroom-feedback-varied.png)
-
-</details>
-
-EditThing processes photos locally. First-time setup downloads its models and requires [Adobe DNG Converter](https://helpx.adobe.com/camera-raw/desktop/dng-and-file-formats/adobe-dng-converter.html). Try a profile on a small set before applying it to a shoot, then finish the photos in Lightroom Classic.
+Screenshots use sample photos from Unsplash and Lorem Picsum, plus one AI-generated burst. See [SCREENSHOTS.md](SCREENSHOTS.md).
 
 ## Availability
 
