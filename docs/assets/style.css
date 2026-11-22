@@ -88,6 +88,9 @@ h3 {
   font-weight: 550;
 }
 .brand img {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
   border-radius: 9px;
 }
 .header nav,
@@ -204,9 +207,6 @@ h3 {
   border: 1px solid #38383a;
   border-top: 0;
   border-radius: 0 0 8px 8px;
-}
-.hero-shot a {
-  display: block;
 }
 .hero-shot figcaption,
 .edit-shot figcaption {
@@ -629,14 +629,14 @@ strong {
 .is-enhanced .gallery-panel {
   margin: 0;
 }
-.gallery-image-link {
+.gallery-image-frame {
   display: block;
   border: 1px solid #393936;
   border-radius: 8px;
   overflow: hidden;
   background: #111113;
 }
-.gallery-image-link img {
+.gallery-image-frame img {
   width: 100%;
   height: auto;
 }
@@ -656,11 +656,6 @@ strong {
   color: var(--muted);
   font-size: 0.95rem;
   margin: 0;
-}
-.gallery-panel figcaption > a {
-  flex-shrink: 0;
-  font-size: 0.85rem;
-  margin-top: 0.15rem;
 }
 .edit-overview-grid {
   display: grid;
@@ -685,10 +680,6 @@ strong {
     display: block;
     margin-top: 1rem;
   }
-  .gallery-panel figcaption > a {
-    display: inline-block;
-    margin-top: 0.85rem;
-  }
   .gallery-panel figcaption p {
     font-size: 0.9rem;
   }
@@ -696,4 +687,56 @@ strong {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+.remove-benefits {
+  max-width: 850px;
+  margin: 0 0 2.5rem;
+  color: var(--muted);
+}
+.remove-benefits h3 {
+  color: var(--text);
+}
+.remove-benefits ul {
+  padding-left: 1.2rem;
+  line-height: 1.65;
+}
+.installation h3 {
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--text);
+}
+.install-command {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 1rem;
+}
+.install-command pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.install-command button {
+  font: inherit;
+  margin-top: 0.8rem;
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 5px;
+  border: 1px solid #79715f;
+  background: #242427;
+  color: var(--text);
+  cursor: pointer;
+}
+.install-command button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+.copy-status {
+  font-size: 0.85rem;
+  min-height: 1.5em;
+  margin: 0.5rem 0;
 }

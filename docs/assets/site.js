@@ -28,3 +28,19 @@ window.addEventListener("hashchange", showInstallSteps);
 showInstallSteps();
 
 setupGalleries();
+
+const copyInstall = document.querySelector("[data-copy-install]");
+if (copyInstall && navigator.clipboard?.writeText) {
+  copyInstall.hidden = false;
+  copyInstall.addEventListener("click", async () => {
+    const command = document.querySelector("#mac-install-command");
+    const status = document.querySelector("[data-copy-status]");
+    try {
+      await navigator.clipboard.writeText(command.textContent.trim());
+      status.textContent = "Copied. Paste into Terminal and press Return.";
+    } catch {
+      status.textContent =
+        "Select and copy the command above, then paste it into Terminal.";
+    }
+  });
+}

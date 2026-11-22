@@ -8,7 +8,7 @@ CullThing is a desktop app for photographers working through large RAW shoots. R
 
 **[Visit the CullThing website](https://andrei930.github.io/cullthing-releases/)** · [Latest release & notes](https://github.com/andrei930/cullthing-releases/releases/latest) · [Report an issue](https://github.com/andrei930/cullthing-releases/issues)
 
-![CullThing photo grid with demo images](docs/assets/cullthing-grid-varied.png)
+![CullThing photo grid with demo images](docs/assets/cullthing-grid-desktop.png)
 
 _The real CullThing interface, captured in demo mode with sample photos. No personal photo library is shown._
 
@@ -18,6 +18,8 @@ _The real CullThing interface, captured in demo mode with sample photos. No pers
 | ----------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | **macOS**   | **[Download for Mac](https://andrei930.github.io/cullthing-releases/download/?platform=macos)**       | Apple Silicon (M1 or newer), macOS 13.4+ · `.dmg` |
 | **Windows** | **[Download for Windows](https://andrei930.github.io/cullthing-releases/download/?platform=windows)** | 64-bit Intel/AMD · `x64-setup.exe`                |
+
+**For an easier Mac install, use the [one-command helper](#quick-install-with-terminal).** It downloads and installs the latest build without a separate quarantine command.
 
 These links look up the latest published stable release and open the matching installer. If a download cannot start, use the **[latest release page](https://github.com/andrei930/cullthing-releases/releases/latest)** and select the `.dmg` or `x64-setup.exe`. Intel Macs and Windows ARM builds are not currently provided.
 
@@ -40,9 +42,20 @@ Files ending in `.app.tar.gz`, `.sig`, and `latest.json` belong to the updater, 
 - **Cull from another device.** Enable **Remote Access** on the desktop, then pair a phone or tablet on the same network to review a project or the library in its browser.
 - **Continue in Lightroom Classic.** Carry ratings, labels, crops, and Remove instructions through XMP. EditThing can write develop settings to sidecars or work with an open catalog through the included Lightroom Classic plug-in.
 
+## Clean up as you cull
+
+**Remove mode lets you prepare distractions for removal while you are already reviewing the shoot.** Brush over a stray cable, sign, or other unwanted object, then move straight to the next frame. CullThing saves the marks as Lightroom-compatible AI-update instructions; Lightroom Classic generates the actual removal when you update AI settings.
+
+- **Spot it once, mark it now.** Keep your filmstrip available so cleanup preparation stays part of the culling pass, without reopening every keeper later just to find the same distractions.
+- **Reuse the work.** Copy and paste marks between similarly framed photos, then refine them. Group strokes that describe one object into a single removal.
+- **Let auto-mark do the first pass.** Choose common distractions such as wires, exit signs, or background cars, or describe an object. Review the suggested marks and accept the ones you want.
+- **Keep your hands moving.** Pan, brush, erase, and resize with configurable modifiers, the wheel, or shortcuts, with fewer trips to the toolbar.
+
+You spend less time repeating selection work and switching between culling and cleanup. The original RAW stays intact; Lightroom remains the place to review and generate the final result.
+
 ## A visual tour
 
-Screenshots show the real interface with sample photos, neutral project names, and illustrative analysis and Lightroom feedback data. They demonstrate the controls, not measured analysis results for these sample photos. Click any image to inspect it at full size.
+Screenshots show the real interface with sample photos, neutral project names, and illustrative analysis and Lightroom feedback data. They demonstrate the controls, not measured analysis results for these sample photos.
 
 <details open>
 <summary><strong>Review and arrange your workspace</strong></summary>
@@ -51,33 +64,33 @@ Pick a layout for the way you review. Keep the controls within reach, inspect th
 
 ### A filmstrip beside the photograph
 
-Keep neighboring frames in a vertical filmstrip, with the floating rating and flag bar and separate navigation buttons within reach.
+Keep neighboring frames in a vertical filmstrip, with the floating rating and flag bar centered beneath the photograph. Floating navigation arrows are off for this desktop layout.
 
-![A filmstrip beside the photograph](docs/assets/review-filmstrip-left-varied.png)
+![A filmstrip beside the photograph](docs/assets/review-filmstrip-left-desktop.png)
 
 ### A filmstrip below the photograph
 
 Switch to a horizontal filmstrip. This view has the floating action bar and navigation buttons switched off, leaving the image clear.
 
-![A filmstrip below the photograph](docs/assets/review-filmstrip-bottom-varied.png)
+![A filmstrip below the photograph](docs/assets/review-filmstrip-bottom-desktop.png)
 
 ### Review one scene at a time
 
 The scene navigator groups the shoot into moments; the neighboring strip shows the frames in the selected scene. Move between moments without losing your place.
 
-![Review one scene at a time](docs/assets/review-scenes-varied.png)
+![Review one scene at a time](docs/assets/review-scenes-desktop.png)
 
 ### Faces, focus, eyes, and the shot details
 
 Inspect the magnified face panel, the focus score, and eye status together. The info panel on the opposite side shows ratings, labels, camera, lens, exposure, and capture information. Eye status appears after Analyze Eyes.
 
-![Faces, focus, eyes, and the shot details](docs/assets/review-faces-info-varied.png)
+![Faces, focus, eyes, and the shot details](docs/assets/review-faces-info-desktop.png)
 
 ### Put each panel where it works for you
 
-Dock the filmstrip left, right, or along the bottom. Move the scene navigator, face panel, and info panel to either side; show or hide floating action and navigation controls.
+Dock the filmstrip left, right, or along the bottom. Move the scene navigator, face panel, and info panel to either side. Center the floating action bar or hide it; navigation arrows can be enabled when using a tablet.
 
-![Put each panel where it works for you](docs/assets/workspace-settings-varied.png)
+![Put each panel where it works for you](docs/assets/workspace-settings-desktop.png)
 
 ### Let the photograph fill the view
 
@@ -96,31 +109,31 @@ Prepare the framing and the cleanup while you are still reviewing. Crop and leve
 
 Brush, select, copy, paste, and group Remove marks while the filmstrip stays available. Adjust brush size, scroll resize speed, and overlay opacity; touching marks can become one removal automatically.
 
-![A workspace built for marking distractions](docs/assets/remove-mode-varied.png)
+![A workspace built for marking distractions](docs/assets/remove-mode-desktop.png)
 
 ### Pan, brush, and erase without hunting for tools
 
 Switch between Pan, Add, and Erase, or stay in Pan and use the configured modifiers to brush and erase. Resize with the wheel, pinch, or shortcuts. The in-app guide explains selection and grouping; modifiers are configurable.
 
-![Pan, brush, and erase without hunting for tools](docs/assets/remove-controls-varied.png)
+![Pan, brush, and erase without hunting for tools](docs/assets/remove-controls-desktop.png)
 
 ### Frame the shot before the handoff
 
 Use aspect presets, lock the ratio, flip the orientation, and drag the crop handles with a composition grid. Apply the crop to XMP without replacing the original photo.
 
-![Frame the shot before the handoff](docs/assets/crop-mode-varied.png)
+![Frame the shot before the handoff](docs/assets/crop-mode-desktop.png)
 
 ### Level the frame with room to fine-tune
 
 Use Straighten for an automatic angle, adjust the Level slider yourself, and reset the crop and angle independently. The example shows a demo angle with the crop kept inside the rotated photo.
 
-![Level the frame with room to fine-tune](docs/assets/straighten-mode-varied.png)
+![Level the frame with room to fine-tune](docs/assets/straighten-mode-desktop.png)
 
 ### Give the photograph more room
 
 Extend the frame beyond the original boundaries with Generative Expand. CullThing prepares a DNG copy; use Update AI Settings in Lightroom to generate the added edges. The white border shown here is the area awaiting generation.
 
-![Give the photograph more room](docs/assets/generative-expand-varied.png)
+![Give the photograph more room](docs/assets/generative-expand-desktop.png)
 
 </details>
 
@@ -157,8 +170,21 @@ CullThing is proprietary software currently distributed for limited testing. Thi
 
 ## Installing on macOS
 
-The current macOS build is ad-hoc signed but is not yet notarized by Apple.
-Consequently, macOS shows a warning the first time CullThing is installed.
+The current macOS build is ad-hoc signed and is not yet notarized by Apple. Choose the guided helper or install the DMG manually.
+
+### Quick install with Terminal
+
+Quit CullThing, open **Terminal**, paste this command, and press **Return**:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/andrei930/cullthing-releases/main/install-macos.sh | /bin/bash
+```
+
+The [installer script](install-macos.sh) downloads the latest stable Apple Silicon build from this official repository, checks its SHA-256 checksum against GitHub's release metadata, verifies the app bundle's identity and signature integrity, installs it, and opens it. It removes quarantine **only from the verified CullThing copy being installed**, so you do not need to type an `xattr` command. This is an explicit override for our current unnotarized test build; it does not notarize the app.
+
+Run it as your normal user, without `sudo`. It uses `/Applications` when writable, otherwise `~/Applications`. Existing photo libraries and app settings are kept. A failed replacement restores the previous app. To inspect it first, open the script link above. Maintainers can run `bash install-macos.sh --dry-run` to download and verify without installing, changing quarantine, or launching.
+
+### Install the DMG manually
 
 1. Open the downloaded `.dmg` file.
 2. Drag **CullThing** into the **Applications** folder, then eject the disk
@@ -177,16 +203,7 @@ it can be opened normally. See
 [Apple's official instructions](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)
 for more information.
 
-If the button is not present, try opening CullThing from **Applications** once
-more and immediately return to **Privacy & Security**. As a last-resort
-fallback, remove the quarantine attribute from this specific installation:
-
-```bash
-xattr -dr com.apple.quarantine /Applications/CullThing.app
-```
-
-Only use either override when CullThing was downloaded from this official
-repository or received directly from the developer.
+If the button is not present, try opening CullThing from **Applications** once more and immediately return to **Privacy & Security**, or use the quick-install helper above. Only approve or run a copy from this official repository.
 
 ## Installing on Windows
 
