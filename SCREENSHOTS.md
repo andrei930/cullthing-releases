@@ -1,5 +1,26 @@
 # Screenshot inventory
 
+## Website captures (2026-11-22)
+
+The home page uses WebP copies in `docs/assets/web/`. They were captured from the actual frontend in isolated mock mode, seeded with a made-up wedding shoot: 39 sample photos, two camera bodies, illustrative ratings, labels, focus scores and capture times. The capture harness lived only in a local checkout and is not published.
+
+| File | Shows |
+| --- | --- |
+| `grid.webp` | Grid view of the sample wedding (hero) |
+| `scenes.webp` | Scenes view with the seven-frame burst selected |
+| `scene-settings.webp` | Scene Settings dialog |
+| `faces.webp` | Face panel with focus score and eye status, info panel |
+| `automark-modal.webp` | Auto-mark dialog with categories and objects |
+| `remove-suggest.webp` | Remove mode with auto-mark suggestions on wires and string lights. The suggestion strokes were placed by hand along the wires for the mock; real results come from the detector |
+| `capture-align.webp` | Align Timelines with two camera lanes, the second clock off by 3 min 42 s |
+| `shortcuts.webp`, `mouse.webp` | Shortcut editor and mouse settings |
+| `layout.webp` | Animation: panels resized by dragging, then hidden |
+| `crop-mode-desktop.webp`, `straighten-mode-desktop.webp`, `generative-expand-desktop.webp`, `editthing-profile-choices.webp` | WebP copies of the earlier captures below |
+
+The seven-frame burst of the couple walking was generated with an image model (GPT image generation via Codex) so the Scenes view has realistic near-identical frames; the website caption says so. Other sample photos: Unsplash (`photo-1515934751635-c81c6bc9a2d8`, `photo-1525258946800-98cfd641d0de`, `photo-1519741497674-611481863552`, `photo-1519225421980-715cb0215aed`, `photo-1522673607200-164d1b6ce486`, `photo-1511285560929-80b456fea0bc`, `photo-1465495976277-4387d4b0b4c6`, `photo-1532712938310-34cb3982ef74`, `photo-1537633552985-df8429e8048b`, `photo-1541250848049-b4f7141dca3f`, `photo-1520854221256-17451cc331bf`, `photo-1494790108377-be9c29b29330`, `photo-1500648767791-00dcc994a43e`, `photo-1531746020798-e6953c6e8e04`, `photo-1534528741775-53994a69daeb`, `photo-1544005313-94ddf0286df2`, `photo-1438761681033-6461ffad8d80`, `photo-1507003211169-0a1dd7228f2d`, `photo-1488426862026-3ee34a7d66df`, `photo-1506794778202-cad84cf45f1d`, `photo-1529626455594-4ff0802cfb7e`, `photo-1508214751196-bcfd4ca60f91`, `photo-1539571696357-5a69c17a67c6`, `photo-1503185912284-5271ff81b9a8`, `photo-1502685104226-ee32379fefbe`, `photo-1583939003579-730e3918a45a`, `photo-1606216794074-735e91aa2c92`) and Lorem Picsum ([325](https://picsum.photos/id/325/info), [129](https://picsum.photos/id/129/info), [399](https://picsum.photos/id/399/info), [65](https://picsum.photos/id/65/info), [351](https://picsum.photos/id/351/info)), used under the Unsplash License.
+
+## Earlier captures (README)
+
 Captured on 2026-11-22 from the actual frontend in isolated demo mode. No private library is used. Names, analysis scores, EXIF, project progress, and Lightroom changes are illustrative demo data. Remove and Expand screenshots show instructions awaiting Lightroom generation, not generated results. All current screenshots use neutral names. The grid and filmstrips use 24 distinct source photos, one per demo file. The Lightroom trial uses 10 distinct source photos. A selected photograph naturally appears both as the main image and its thumbnail; scene representatives also refer to their actual frames.
 
 ## Make the workspace yours.

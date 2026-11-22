@@ -7,7 +7,7 @@
     <title>CullThing</title>
     <meta
       name="description"
-      content="A photo culling app for photographers who finish in Lightroom Classic. Downloads for Mac and Windows."
+      content="A photo culling app for photographers who finish in Lightroom Classic. Mark Remove fixes while you cull and let Lightroom generate them all in one batch. Downloads for Mac and Windows."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CullThing" />
@@ -21,7 +21,7 @@
     />
     <meta
       property="og:image"
-      content="https://andrei930.github.io/cullthing-releases/assets/cullthing-grid-desktop.png"
+      content="https://andrei930.github.io/cullthing-releases/assets/og.jpg"
     />
     <link
       rel="canonical"
@@ -39,8 +39,8 @@
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap"
     />
-    <link rel="stylesheet" href="assets/style.css?v=20261122-rewrite" />
-    <script type="module" src="assets/site.js?v=20261122-rewrite"></script>
+    <link rel="stylesheet" href="assets/style.css?v=20261123-tour" />
+    <script type="module" src="assets/site.js?v=20261123-tour"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -51,9 +51,11 @@
         >
         <nav aria-label="Main">
           <a href="#new">What's new</a>
-          <a href="#features">Features</a>
+          <a href="#culling">Culling</a>
+          <a href="#remove">Remove</a>
+          <a href="#lightroom">Lightroom</a>
+          <a href="#editthing">EditThing</a>
           <a href="#install">Install</a>
-          <a href="https://github.com/andrei930/cullthing-releases">GitHub</a>
         </nav>
       </header>
 
@@ -67,8 +69,9 @@
             </p>
             <p class="body">
               Go through a shoot scene by scene, check faces and focus, and
-              rate and flag from the keyboard. Mark crops and cleanups as you
-              go. Everything reaches Lightroom as XMP.
+              rate from the keyboard. Brush out distractions while you cull,
+              and Lightroom generates every removal in one batch instead of
+              making you wait on each photo.
             </p>
             <div class="downloads">
               <a
@@ -125,127 +128,366 @@
         <figure class="hero-shot">
           <img
             class="shot"
-            src="assets/web/cullthing-grid-desktop.webp"
+            src="assets/web/grid.webp"
             width="1920"
-            height="1253"
-            alt="CullThing's grid view: a shoot of 24 photos with star ratings, pick flags and one selected frame."
+            height="1200"
+            alt="CullThing's grid view of a wedding shoot, with star ratings, pick and reject flags and color labels."
           />
           <figcaption class="faint">
-            Sample photos from Unsplash and Lorem Picsum.
+            Sample photos from Unsplash and Lorem Picsum. The burst of the
+            couple walking is AI-generated.
           </figcaption>
         </figure>
 
-        <section id="features" aria-labelledby="features-heading">
-          <h2 class="section-title" id="features-heading">What it does</h2>
-
-          <div class="feature">
-            <div>
-              <h3>Sort the shoot by scene</h3>
+        <!-- Culling -->
+        <section class="chapter" id="culling" aria-labelledby="scenes-heading">
+          <p class="kicker">Culling</p>
+          <h2 id="scenes-heading">Scenes: the shoot, grouped into moments</h2>
+          <div class="split">
+            <div class="prose">
               <p>
-                CullThing groups the shoot into scenes. Work through one moment
-                at a time and keep the best frames of each.
+                CullThing splits the shoot wherever there's a gap between
+                shots, so the details, the ceremony and each burst of
+                portraits become their own scene. The scene list shows how many photos each one
+                has and what you've already rated. Pick the best of a scene and
+                move to the next.
+              </p>
+              <p>
+                If the grouping doesn't match how you shot, change it in Scene
+                Settings:
+              </p>
+              <ul class="ticks">
+                <li>the time between shots that starts a new scene, from 2&nbsp;seconds to 5&nbsp;minutes</li>
+                <li>visual similarity, to also split when the shots look different</li>
+                <li>a maximum number of photos per scene</li>
+                <li>separate scenes by lens, camera body, folder or orientation</li>
+              </ul>
+            </div>
+            <img
+              class="shot"
+              src="assets/web/scene-settings.webp"
+              width="1340"
+              height="1168"
+              loading="lazy"
+              alt="Scene Settings: time between shots, visual similarity, maximum photos per scene, and grouping by lens, camera serial, folder or orientation."
+            />
+          </div>
+          <img
+            class="shot"
+            src="assets/web/scenes.webp"
+            width="1920"
+            height="1200"
+            loading="lazy"
+            alt="Scenes view: the scene list with photo counts, and a seven-frame burst of a couple walking, with the best frame picked and a blink rejected."
+          />
+        </section>
+
+        <section class="chapter" aria-labelledby="faces-heading">
+          <h3 id="faces-heading">Faces, eyes and focus</h3>
+          <div class="split">
+            <div class="prose">
+              <p>
+                The face panel shows each detected face enlarged, with a focus
+                score from 1 to 10. <b>Analyze Eyes</b> marks eyes as open,
+                partly closed or closed, so a blink doesn't slip through.
+              </p>
+              <p>
+                The zoom key goes straight to the sharpest face, or to the
+                camera's focus point if you prefer. It keeps that spot as you
+                step to the next frame, so you compare the same eyes across a
+                burst.
+              </p>
+            </div>
+            <div></div>
+          </div>
+          <img
+            class="shot"
+            src="assets/web/faces.webp"
+            width="1920"
+            height="1200"
+            loading="lazy"
+            alt="A guest portrait with the face panel showing the enlarged face, focus score 9 and an open-eyes icon, next to the info panel."
+          />
+        </section>
+
+        <section class="chapter" aria-labelledby="time-heading">
+          <h3 id="time-heading">Line up camera clocks</h3>
+          <div class="split">
+            <div class="prose">
+              <p>
+                With two bodies or a second shooter, one clock is usually off,
+                and the shoot comes out of order. <b>Align Timelines</b> puts
+                each camera on its own lane: drag a lane until the moments
+                match, nudge it by a second, or let <b>Suggest</b> find where
+                the bursts line up. If a clock changed during the day, split
+                the lane and move each part on its own.
+              </p>
+              <p>
+                You can also sync from one moment both cameras shot, or type
+                an offset like −3m&nbsp;42s. Save the offsets to the Clock
+                library and reuse them at the next event. Every change is
+                previewed first and written to XMP.
+              </p>
+            </div>
+            <div></div>
+          </div>
+          <img
+            class="shot"
+            src="assets/web/capture-align.webp"
+            width="1920"
+            height="999"
+            loading="lazy"
+            alt="Align Timelines with two camera lanes; the second camera's photo of the same moment sits three minutes later."
+          />
+        </section>
+
+        <section class="chapter" aria-labelledby="speed-heading">
+          <h3 id="speed-heading">Fast, and laid out your way</h3>
+          <div class="split">
+            <div class="prose">
+              <p>
+                Stepping to the next photo feels instant, even on RAW files
+                you've never opened before. Previews and faces are prepared
+                ahead of where you're going, so the next photo is ready when
+                you get there.
+              </p>
+              <p>
+                Every panel can be resized, moved to the other side or hidden.
+                The filmstrip docks left, right or along the bottom, and you can
+                hide everything but the photo.
               </p>
             </div>
             <img
               class="shot"
-              src="assets/web/review-scenes-desktop.webp"
-              width="1920"
-              height="1254"
+              src="assets/web/layout.webp"
+              width="1200"
+              height="750"
               loading="lazy"
-              alt="Scene view: a list of scenes on the left and the frames of the selected scene next to the photo."
+              alt="Animation: the face panel, info panel and filmstrip are resized by dragging their edges, then hidden."
             />
           </div>
+        </section>
 
-          <div class="feature">
-            <div>
-              <h3>Check faces, eyes and focus</h3>
+        <section class="chapter" aria-labelledby="controls-heading">
+          <h3 id="controls-heading">Your keys, your mouse</h3>
+          <div class="split">
+            <div class="prose">
               <p>
-                The face panel shows faces up close with a focus score, and
-                Analyze Eyes adds eye status. Camera, lens and exposure sit in
-                the info panel.
+                The default keys follow Lightroom: <kbd>0</kbd>–<kbd>5</kbd> for
+                stars, <kbd>P</kbd> <kbd>X</kbd> <kbd>U</kbd> for flags and
+                <kbd>6</kbd>–<kbd>9</kbd> for color labels. Every shortcut can be
+                changed.
+              </p>
+              <p>
+                The mouse's back and forward buttons can do any action, such as
+                the next scene or a rating, with separate actions in Remove
+                mode. The scroll wheel can step through photos at the speed you
+                set. On a tablet you can swipe, drag or double-tap.
+              </p>
+            </div>
+            <div class="stack">
+              <img
+                class="shot"
+                src="assets/web/shortcuts.webp"
+                width="1340"
+                height="1433"
+                loading="lazy"
+                alt="The shortcut editor with navigation and review keys."
+              />
+              <img
+                class="shot"
+                src="assets/web/mouse.webp"
+                width="1268"
+                height="591"
+                loading="lazy"
+                alt="Mouse settings: scroll wheel navigation, sensitivity, and actions for the back and forward buttons."
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Remove: the headline feature -->
+        <section class="chapter" id="remove" aria-labelledby="remove-heading">
+          <p class="kicker">Remove</p>
+          <h2 id="remove-heading">Brush now, let Lightroom remove it all later</h2>
+          <div class="split">
+            <div class="prose">
+              <p>
+                In Lightroom Classic, Generative Remove runs while you wait:
+                brush a cable, wait for it to fill, check it, go to the next
+                photo. Each removal can take minutes, so cleaning up a whole
+                shoot ties you to the screen.
+              </p>
+              <p>
+                CullThing moves the brushing into the cull. You mark
+                distractions while you're already looking at each photo, and
+                the marks are saved as Lightroom Remove instructions in the
+                photo's XMP. In Lightroom you select the shoot and choose
+                <b>Update AI Settings</b> once. It generates every removal in
+                one batch, so you can leave it running overnight.
+              </p>
+            </div>
+            <figure class="diagram" aria-label="Lightroom alone: brush, wait, brush, wait. With CullThing: brush every photo during the cull, then one batch in Lightroom.">
+              <div class="lane">
+                <p class="lane-title">Lightroom alone</p>
+                <div class="track">
+                  <span class="b">brush</span><span class="w">wait</span
+                  ><span class="b">brush</span><span class="w">wait</span
+                  ><span class="b">brush</span><span class="w">wait</span
+                  ><span class="b">…</span>
+                </div>
+                <p class="lane-note faint">You wait on every photo.</p>
+              </div>
+              <div class="lane">
+                <p class="lane-title">With CullThing</p>
+                <div class="track">
+                  <span class="b">brush</span><span class="b">brush</span
+                  ><span class="b">brush</span><span class="b">brush</span
+                  ><span class="b">brush</span><span class="batch">one batch in Lightroom</span>
+                </div>
+                <p class="lane-note faint">
+                  You brush during the cull; the waiting happens without you.
+                </p>
+              </div>
+            </figure>
+          </div>
+          <ul class="facts">
+            <li><b>Copy marks</b> to similar frames, then adjust them.</li>
+            <li><b>Touching marks</b> become one Lightroom removal automatically.</li>
+            <li><b>Erase</b> part of a mark, or select and move marks.</li>
+            <li><b>Pan, brush, erase and resize</b> with modifier keys and the wheel, without going to the toolbar.</li>
+          </ul>
+          <p class="faint">
+            CullThing saves instructions only. Lightroom Classic does the fill,
+            and the original RAW is never changed.
+          </p>
+        </section>
+
+        <section class="chapter" id="auto-mark" aria-labelledby="auto-mark-heading">
+          <h3 id="auto-mark-heading">Auto-mark finds the usual suspects</h3>
+          <div class="split split-media">
+            <div class="prose">
+              <p>
+                Pick what to look for, and auto-mark adds Remove marks for it:
+                wires and cables, exit signs, power outlets, light switches,
+                smoke detectors, air conditioners, fire extinguishers, bottles,
+                utility poles, street lights, trash cans, hydrants and cars in
+                the background. Or type any other object and keep it in your
+                list.
+              </p>
+              <p>
+                Group objects into categories such as Indoors, Party and
+                Outdoors. Run it on one photo, or queue a whole selection and
+                keep culling while it works in the background.
+              </p>
+              <p>
+                Suggestions show striped and stay out of Lightroom until you
+                accept them (<kbd>Y</kbd>) or reject them (<kbd>N</kbd>).
+                Auto-mark never changes the marks you painted yourself. It runs
+                on your computer after a one-time model download.
               </p>
             </div>
             <img
-              class="shot"
-              src="assets/web/review-faces-info-desktop.webp"
-              width="1920"
-              height="1254"
+              class="shot narrow-shot"
+              src="assets/web/automark-modal.webp"
+              width="784"
+              height="1536"
               loading="lazy"
-              alt="A portrait with the info panel on the left and a magnified face on the right."
+              alt="The auto-mark dialog with categories, a list of objects to look for, and a field to type another object."
             />
           </div>
+          <img
+            class="shot"
+            src="assets/web/remove-suggest.webp"
+            width="1920"
+            height="911"
+            loading="lazy"
+            alt="Remove mode on a night street: striped suggestions along the overhead wires and string lights, and the panel offering Accept all or Reject all."
+          />
+        </section>
 
-          <div class="feature">
+        <!-- Lightroom flow -->
+        <section class="chapter" id="lightroom" aria-labelledby="lr-heading">
+          <p class="kicker">Lightroom</p>
+          <h2 id="lr-heading">How it fits with Lightroom Classic</h2>
+          <ol class="flow">
+            <li>
+              <b>Copy the cards</b>
+              <span>Card Manager copies memory cards to one or more destinations.</span>
+            </li>
+            <li>
+              <b>Cull in CullThing</b>
+              <span>Ratings, color labels, crops, angles and Remove marks are saved to XMP next to each RAW.</span>
+            </li>
+            <li>
+              <b>Start the edit</b>
+              <span>EditThing writes develop settings to the XMP, or into an open catalog with the Lightroom plug-in.</span>
+            </li>
+            <li>
+              <b>Open in Lightroom</b>
+              <span>Import the folder, or choose Metadata → Read Metadata from Files if it's already in your catalog.</span>
+            </li>
+            <li>
+              <b>Update AI Settings</b>
+              <span>Select the shoot once. Lightroom generates every removal and expanded edge in one batch.</span>
+            </li>
+          </ol>
+          <div class="trio">
             <div>
-              <h3>Mark distractions while you cull</h3>
+              <img
+                class="shot"
+                src="assets/web/crop-mode-desktop.webp"
+                width="1920"
+                height="1254"
+                loading="lazy"
+                alt="Crop mode with crop handles and aspect presets."
+              />
+              <h4>Crop</h4>
+              <p class="muted">Aspect presets, a locked ratio and a composition grid.</p>
+            </div>
+            <div>
+              <img
+                class="shot"
+                src="assets/web/straighten-mode-desktop.webp"
+                width="1920"
+                height="1253"
+                loading="lazy"
+                alt="Straighten mode with a rotated photo and the Level slider."
+              />
+              <h4>Straighten</h4>
+              <p class="muted">An automatic angle, or set the level yourself.</p>
+            </div>
+            <div>
+              <img
+                class="shot"
+                src="assets/web/generative-expand-desktop.webp"
+                width="1920"
+                height="1254"
+                loading="lazy"
+                alt="Generative Expand: a photo with a white border marking the area to fill."
+              />
+              <h4>Generative Expand</h4>
+              <p class="muted">Prepares a DNG copy; Lightroom fills the new edges in the same batch.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- EditThing -->
+        <section class="chapter" id="editthing" aria-labelledby="edit-heading">
+          <p class="kicker">EditThing</p>
+          <h2 id="edit-heading">A first edit in your style, free and on your computer</h2>
+          <div class="split">
+            <div class="prose">
               <p>
-                Brush over a stray cable or a sign, or let auto-mark find wires,
-                exit signs and background cars. The marks are saved to XMP, and
-                Lightroom Classic does the removal.
+                Services that learn your editing style usually charge per photo
+                or by subscription, and upload your photos to do it. EditThing
+                is free and runs on your own computer.
               </p>
-            </div>
-            <img
-              class="shot"
-              src="assets/web/remove-mode-desktop.webp"
-              width="1920"
-              height="1254"
-              loading="lazy"
-              alt="Remove mode: a marked path in a forest photo, with brush and auto-mark controls on the right."
-            />
-          </div>
-
-          <div class="feature feature-wide">
-            <div>
-              <h3>Frame it before the handoff</h3>
-              <p>Crops and angles are saved to XMP; the original file isn't touched.</p>
-            </div>
-            <div class="trio">
-              <div>
-                <img
-                  class="shot"
-                  src="assets/web/crop-mode-desktop.webp"
-                  width="1920"
-                  height="1254"
-                  loading="lazy"
-                  alt="Crop mode with crop handles and aspect presets."
-                />
-                <h4>Crop</h4>
-                <p class="muted">Aspect presets, a locked ratio and a composition grid.</p>
-              </div>
-              <div>
-                <img
-                  class="shot"
-                  src="assets/web/straighten-mode-desktop.webp"
-                  width="1920"
-                  height="1253"
-                  loading="lazy"
-                  alt="Straighten mode with a rotated photo and the Level slider."
-                />
-                <h4>Straighten</h4>
-                <p class="muted">An automatic angle, or set the level yourself.</p>
-              </div>
-              <div>
-                <img
-                  class="shot"
-                  src="assets/web/generative-expand-desktop.webp"
-                  width="1920"
-                  height="1254"
-                  loading="lazy"
-                  alt="Generative Expand: a photo with a white border marking the area to fill."
-                />
-                <h4>Generative Expand</h4>
-                <p class="muted">Prepares a DNG copy for Lightroom to fill in.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature" id="editthing">
-            <div>
-              <h3>EditThing: a first edit in your style</h3>
               <p>
-                Train a profile on photos you've already edited, or start from a
-                preset and nine questions. Try it on a few photos, correct it in
-                Lightroom, then apply it to the shoot. It runs on your computer.
+                Build a <b>Personal</b> profile from photos you've already
+                edited, from Lightroom catalogs or folders of RAW files with
+                XMP. Or start an <b>Instant</b> profile from a Lightroom preset
+                and nine questions about your taste.
               </p>
             </div>
             <img
@@ -258,46 +500,60 @@
             />
           </div>
 
-          <div class="feature">
-            <div>
-              <h3>Set up the screen your way</h3>
+          <h3 class="sub">Try it out, fix it in Lightroom, repeat</h3>
+          <div class="split">
+            <div class="prose">
               <p>
-                Filmstrip on the left, right or bottom; panels on either side.
-                Or hide everything but the photo.
+                A profile is rarely right the first time, so EditThing lets you
+                correct it the way you already work:
+              </p>
+              <ol class="loop">
+                <li>Try the profile on about 10 photos from different parts of a shoot. EditThing edits copies; your originals stay as they are.</li>
+                <li>Fix those photos in Lightroom.</li>
+                <li>EditThing reads what you changed. Changes you made consistently are ticked; mixed ones are left for you to decide.</li>
+                <li>Save them to the profile as adjustments. The 10 photos are redone with them, and you check again.</li>
+              </ol>
+              <p>
+                When it looks like your work, apply it to the whole shoot. You
+                can undo a single photo or the whole run.
+              </p>
+              <p class="faint">
+                EditThing needs Adobe DNG Converter and downloads its models
+                during first-time setup.
               </p>
             </div>
             <img
               class="shot"
-              src="assets/web/workspace-settings-desktop.webp"
-              width="1920"
-              height="1254"
+              src="assets/editthing-lightroom-feedback-varied.png"
+              width="1100"
+              height="900"
               loading="lazy"
-              alt="Workspace settings for the filmstrip and panel positions."
+              alt="EditThing's trial review: the changes detected from Lightroom edits, with consistent ones ticked, ready to save as adjustments."
             />
           </div>
-
-          <div class="also">
-            <div>
-              <h3>Card Manager</h3>
-              <p>Copy memory cards to one or more destinations.</p>
-            </div>
-            <div>
-              <h3>Cull from your phone</h3>
-              <p>
-                Turn on Remote Access and open the project in a phone or tablet
-                browser on the same network.
-              </p>
-            </div>
-            <div>
-              <h3>Lightroom reads it all</h3>
-              <p>Ratings, labels, flags, crops and marks go into XMP sidecars.</p>
-            </div>
-            <div>
-              <h3>Updates</h3>
-              <p>Choose Check for Updates… in the app menu.</p>
-            </div>
-          </div>
         </section>
+
+        <div class="also">
+          <div>
+            <h3>Cull from your phone</h3>
+            <p>
+              Turn on Remote Access and open the project in a phone or tablet
+              browser on the same network.
+            </p>
+          </div>
+          <div>
+            <h3>Folder stats</h3>
+            <p>See scene coverage, kept and unmarked photos, and breakdowns by time of day and lens.</p>
+          </div>
+          <div>
+            <h3>Find by filename</h3>
+            <p>Jump to any photo with <kbd>⌘F</kbd> / <kbd>Ctrl+F</kbd>.</p>
+          </div>
+          <div>
+            <h3>Updates</h3>
+            <p>Choose Check for Updates… in the app menu.</p>
+          </div>
+        </div>
 
         <section id="install" aria-labelledby="install-heading">
           <h2 class="section-title" id="install-heading">Install</h2>
